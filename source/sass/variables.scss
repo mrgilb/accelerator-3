@@ -1,0 +1,34 @@
+// Colors
+// ---------------------------------
+
+$color-font-default-white:rgba(255, 255, 255, 0.7);
+$color-font-default-grey:#f2f5f7;
+$color-font-default-black:#041827;
+$color-default-black:#041827;
+$color-default-skyblue: #00b3ff;
+$color-default-darkgrey: rgba(4, 24, 39, 0.5);
+
+// Viewports
+// ---------------------------------
+
+$vp-320:                            319px;
+$vp-768:                            767px;
+$vp-1024:                           1199px;
+
+//Fonts
+
+
+$bebas700 : "Bebas Bold", "Arial", sans-serif;
+$bebas400 : "Bebas Regular", "Arial", sans-serif;
+$roboto300: "Roboto Condensed Light", "Arial", sans-serif;
+$roboto700: "Roboto Condensed Bold", "Arial", sans-serif;
+$roboto400: "Roboto Condensed Regular", "Arial", sans-serif;
+
+// Retina
+// ---------------------------------
+
+$retina-dppx: 2dppx;
+
+//Animation
+
+$allease: all 500ms ease;
