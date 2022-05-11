@@ -1,0 +1,11 @@
+.header {
+  background: conic-gradient(from 130.31deg at 16.03% 39.06%, #B80027 -46.69deg, #003D85 32.24deg, #B80027 313.31deg, #003D85 392.24deg);
+  padding: 25px 20px 5px;
+  box-sizing: border-box;
+}
+
+.header__wrapper {
+  max-width: 1160px;
+  margin: 0 auto;
+  display: flex;
+}

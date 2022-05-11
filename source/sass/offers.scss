@@ -1,0 +1,39 @@
+.offers {
+  background-color: #f8f9fc;
+  margin-top: 118px;
+  padding: 114px 20px;
+  padding-bottom: 79px;
+  box-sizing: border-box;
+  position: relative;
+  z-index: 1;
+
+  &::before {
+    content: "";
+    position: absolute;
+    z-index: -1;
+    width: 286px;
+    height: 384px;
+    bottom: 0;
+    right: 0;
+    margin-bottom: -96px;
+    background-image: url("../img/offers-bg-desktop.png");
+
+    @media (min-resolution: $retina-dppx) {
+      background-image: url("../img/offers-bg-desktop@2x.png");
+    }
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: right;
+  }
+}
+
+
+.offers h2 {
+  font-family: $bebas700;
+  font-size: 49px;
+  font-weight: 700;
+  line-height: 49px;
+  letter-spacing: 0.03em;
+  text-align: center;
+  margin: 0;
+}

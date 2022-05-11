@@ -18,42 +18,66 @@
     <nav class="nav">
       <ul>
         <li>
-          <img src="./img/svg/logo.svg" width="89" height="20" alt="logo">
+          <a>
+            <img src="./img/svg/logo.svg" width="89" height="20" alt="logo">
+          </a>
         </li>
         <li>
           <a href="tel:+78005555555">8-800-555-55-55</a>
         </li>
       </ul>
     </nav>
-    <div class="promo">
-      <span>омск</span>
-      <h1>
-        Фитнес
-        центр
-      </h1>
-      <ul>
-        <li>Тренажёрный зал</li>
-        <li>Групповые занятия</li>
-        <li>Кардио-зона</li>
+    <div class="header__wrapper">
+      <div class="promo">
+        <div class="promo__text-container">
+          <span>омск</span>
+        <h1 class="promo__title">
+          Фитнес
+          центр
+        </h1>
+        <ul>
+          <li>Тренажёрный зал</li>
+          <li>Групповые занятия</li>
+          <li>Кардио-зона</li>
+        </ul>
+        <a href="#">Купить абонемент</a>
+        </div>
+      </div>
+      <ul class="socials">
+        <li>
+          <a href="#">FB</a>
+        </li>
+        <li>
+          <a href="#">VK</a>
+        </li>
+        <li>
+          <a href="#">IG</a>
+        </li>
       </ul>
-      <a href="#">Купить абонемент</a>
     </div>
   </header>
   <main class="main">
     <section class="about">
-      <h2>Тренажерный зал</h2>
-      <span>Просторный зал площадью 900 кв/м</span>
-      <p>
-        Supergym&nbsp;&mdash; самый большой фитнес центр за&nbsp;Уралом и&nbsp;идеальное место для укрепления тела
-        и&nbsp;здоровья.
-        Тренажерный зал оснащен всем необходимым современным оборудованием для всех спортсменов.
-      </p>
-      <p>
-        В&nbsp;зале расположены отдельная зона для Crossfit и&nbsp;кардио-зона с&nbsp;40&nbsp;тренажерами.
-        Также в&nbsp;фитнес центре есть несколько оборудованных залов для различных видов групповых занятий.
-      </p>
-      <div class="preview">
-        <img src="./img/preview-desktop.png" width="364" height="228" alt="">
+      <div class="about__wrapper">
+        <div class="about__text">
+          <h2>Тренажерный зал</h2>
+          <span>Просторный зал площадью 900 кв/м</span>
+          <p>
+            Supergym&nbsp;&mdash; самый большой фитнес центр за&nbsp;Уралом и&nbsp;идеальное место для укрепления тела
+            и&nbsp;здоровья.
+            Тренажерный зал оснащен всем необходимым современным оборудованием для всех спортсменов.
+          </p>
+          <p class="about__text-desktop">
+            В&nbsp;зале расположены отдельная зона для Crossfit и&nbsp;кардио-зона с&nbsp;40&nbsp;тренажерами.
+            Также в&nbsp;фитнес центре есть несколько оборудованных залов для различных видов групповых занятий.
+          </p>
+        </div>
+        <div class="about__iamge-container">
+          <img src="./img/about-bg-desktop.png" width="660" height="401" alt="Изображение тренажерного зала">
+        </div>
+        <div class="preview about__video">
+          <img src="./img/preview-desktop.png" width="364" height="228" alt="">
+        </div>
       </div>
     </section>
     <section class="offers">
@@ -62,190 +86,190 @@
         <div class="tabs__controls">
           <ul>
             <li>
-              <button>
+              <button class="tabs__button tabs__button--active">
                 1 месяц
               </button>
             </li>
             <li>
-              <button>
+              <button class="tabs__button">
                 6 месяцев
               </button>
             </li>
             <li>
-              <button>
+              <button class="tabs__button">
                 12 месяцев
               </button>
             </li>
           </ul>
         </div>
-      </div>
-      <div class="tabs__content">
-        <ul>
-          <li>
-            <h3>С тренером</h3>
-            <span>12 занятий</span>
-            <p>5000 <span>₽</span></p>
-            <a href="#">купить абонемент</a>
-          </li>
-          <li>
-            <h3>С тренером</h3>
-            <span>12 занятий</span>
-            <p>5000 <span>₽</span></p>
-            <a href="#">купить абонемент</a>
-          </li>
-          <li>
-            <h3>С тренером</h3>
-            <span>12 занятий</span>
-            <p>5000 <span>₽</span></p>
-            <a href="#">купить абонемент</a>
-          </li>
-        </ul>
-      </div>
-    </section>
-    <article>
-      <div>
-        <h1>SUPER GAMES</h1>
-        <ul>
-          <li>
-            <p>
-              Дата
-            </p>
-            <p>
-              <span>7</span>
-              <span>
-                Марта<br>
-                2019
-              </span>
-            </p>
-          </li>
-          <li>
-            <p>Время</p>
-            <p>12:00</p>
-          </li>
-        </ul>
-        <p>Ежегодные соревнования по CrossFit</p>
-        <a href="#">заполнить заявку</a>
-      </div>
+        <div class="tabs__content">
+          <ul>
+            <li class="tabs__content-item" tabindex="0">
+              <h3>С тренером</h3>
+              <span>12 занятий</span>
+              <p data-parrent="5000">5000 <span class="tabs__ruble">₽</span></p>
+              <a href="#">купить абонемент</a>
+            </li>
+            <li class="tabs__content-item" tabindex="0">
+              <h3>Дневной</h3>
+              <span>с 8:00 до 17:00</span>
+              <p data-parrent="1700">1700 <span class="tabs__ruble">₽</span></p>
+              <a href="#">купить абонемент</a>
+            </li>
+            <li class="tabs__content-item" tabindex="0">
+              <h3>Полный день</h3>
+              <span>с 8:00 до 22:00 </span>
+              <p data-parrent="2700">2700 <span class="tabs__ruble">₽</span></p>
+              <a href="#">купить абонемент</a>
+            </li>
+          </ul>
+        </div>
+      </section>
+      <article class="article">
+        <div class="article__container">
+          <h1 class="article__title">SUPER <span>GAMES</span></h1>
+          <ul class="article__list">
+            <li class="article__item">
+              <p>
+                Дата
+              </p>
+              <p>
+                <span>7</span>
+                <span class="article__mounth">
+                  Марта
+                  <br>
+                  2019
+                </span>
+              </p>
+            </li>
+            <li class="article__item">
+              <p>Время</p>
+              <span class="article__time">12:00</span>
+            </li>
+          </ul>
+          <p>Ежегодные соревнования по CrossFit</p>
+          <a href="#">заполнить заявку</a>
+        </div>
     </article>
     <section class="coaches">
       <h2>Тренеры</h2>
       <div class="slider">
         <div class="slifer__controls">
           <button>
-            <span>назад</span>
+            <span class="visually-hidden">назад</span>
           </button>
           <button>
-            <span>далее</span>
+            <span class="visually-hidden">далее</span>
           </button>
         </div>
         <div class="slider__slides">
           <ul>
-            <li>
-              <div>
+            <li class="slider__item" tabindex="0">
+              <div class="slider__image-container">
                 <img src="./img/content/anna.png" width="260" height="294" alt="Фото тренера">
               </div>
-              <div>
+              <div class="slider__card-container">
                 <h3>Анна Павлова</h3>
                 <span>CrossFit</span>
-                <ul>
+                <ul class="slider__list-awards">
                   <li>Certified Level 3 Trainer</li>
                   <li>Победитель чемпионата России по CrossFit </li>
                   <li>Опыт — 6 лет</li>
                 </ul>
               </div>
             </li>
-            <li>
-              <div>
+            <li class="slider__item" tabindex="0">
+              <div class="slider__image-container">
                 <img src="./img/content/alexei.png" width="260" height="294" alt="Фото тренера">
               </div>
-              <div>
+              <div class="slider__card-container">
                 <h3>Алексей Лавров</h3>
                 <span>CrossFit</span>
-                <ul>
+                <ul class="slider__list-awards">
                   <li>Certified Level 3 Trainer</li>
                   <li>Победитель чемпионата России по CrossFit </li>
                   <li>Опыт — 6 лет</li>
                 </ul>
               </div>
             </li>
-            <li>
-              <div>
+            <li class="slider__item" tabindex="0">
+              <div class="slider__image-container">
                 <img src="./img/content/alexander.png" width="260" height="294" alt="Фото тренера">
               </div>
-              <div>
+              <div class="slider__card-container">
                 <h3>Александр Пашков</h3>
                 <span>CrossFit</span>
-                <ul>
+                <ul class="slider__list-awards">
                   <li>Certified Level 3 Trainer</li>
                   <li>Победитель чемпионата России по CrossFit </li>
                   <li>Опыт — 6 лет</li>
                 </ul>
               </div>
             </li>
-            <li>
-              <div>
+            <li class="slider__item" tabindex="0">
+              <div class="slider__image-container">
                 <img src="./img/content/maria.png" width="260" height="294" alt="Фото тренера">
               </div>
-              <div>
+              <div class="slider__card-container">
                 <h3>Мария Кетова</h3>
                 <span>CrossFit</span>
-                <ul>
+                <ul class="slider__list-awards">
                   <li>Certified Level 3 Trainer</li>
                   <li>Победитель чемпионата России по CrossFit </li>
                   <li>Опыт — 6 лет</li>
                 </ul>
               </div>
             </li>
-            <li>
-              <div>
+            <li class="slider__item" tabindex="0">
+              <div class="slider__image-container">
                 <img src="./img/content/anna.png" width="260" height="294" alt="Фото тренера">
               </div>
-              <div>
+              <div class="slider__card-container">
                 <h3>Анна Павлова</h3>
                 <span>CrossFit</span>
-                <ul>
+                <ul class="slider__list-awards">
                   <li>Certified Level 3 Trainer</li>
                   <li>Победитель чемпионата России по CrossFit </li>
                   <li>Опыт — 6 лет</li>
                 </ul>
               </div>
             </li>
-            <li>
-              <div>
+            <li class="slider__item" tabindex="0">
+              <div class="slider__image-container">
                 <img src="./img/content/alexei.png" width="260" height="294" alt="Фото тренера">
               </div>
-              <div>
+              <div class="slider__card-container">
                 <h3>Алексей Лавров</h3>
                 <span>CrossFit</span>
-                <ul>
+                <ul class="slider__list-awards">
                   <li>Certified Level 3 Trainer</li>
                   <li>Победитель чемпионата России по CrossFit </li>
                   <li>Опыт — 6 лет</li>
                 </ul>
               </div>
             </li>
-            <li>
-              <div>
+            <li class="slider__item" tabindex="0">
+              <div class="slider__image-container">
                 <img src="./img/content/alexander.png" width="260" height="294" alt="Фото тренера">
               </div>
-              <div>
+              <div class="slider__card-container">
                 <h3>Александр Пашков</h3>
                 <span>CrossFit</span>
-                <ul>
+                <ul class="slider__list-awards">
                   <li>Certified Level 3 Trainer</li>
                   <li>Победитель чемпионата России по CrossFit </li>
                   <li>Опыт — 6 лет</li>
                 </ul>
               </div>
             </li>
-            <li>
-              <div>
+            <li class="slider__item" tabindex="0">
+              <div class="slider__image-container">
                 <img src="./img/content/maria.png" width="260" height="294" alt="Фото тренера">
               </div>
-              <div>
+              <div class="slider__card-container">
                 <h3>Мария Кетова</h3>
                 <span>CrossFit</span>
-                <ul>
+                <ul class="slider__list-awards">
                   <li>Certified Level 3 Trainer</li>
                   <li>Победитель чемпионата России по CrossFit </li>
                   <li>Опыт — 6 лет</li>
