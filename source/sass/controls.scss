@@ -1,0 +1,23 @@
+.controls {
+  width: 16px;
+  height: 32px;
+  position: relative;
+  border: none;
+  background-color: transparent;
+  cursor: pointer;
+
+  &:first-child::after {
+    transform: rotate(180deg);
+  }
+
+  &::after {
+    content: "";
+    position: absolute;
+    width: 16px;
+    height: 32px;
+    top: 0;
+    right: 0;
+    background-image: url("../img/svg/arrow.svg");
+    background-size: cover;
+  }
+}

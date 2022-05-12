@@ -11,6 +11,7 @@
   padding: 0;
   list-style: none;
   display: flex;
+  flex-wrap: wrap;
   justify-content: space-between;
 }
 
@@ -33,4 +34,30 @@
     text-shadow:5px 5px 5px #333333;
     outline: none;
   }
+}
+
+.nav--footer ul {
+  justify-content: flex-start;
+  max-width: 794px;
+  box-sizing: border-box;
+}
+
+.nav--footer li {
+  margin-right: 36px;
+
+  &:first-child {
+    margin-right: auto;
+  }
+
+  &:last-child {
+    margin-right: 0;
+  }
+}
+
+.nav--footer a {
+  font-family: $roboto400;
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 16px;
+  text-align: left;
 }

@@ -32,3 +32,19 @@
     outline: none;
   }
 }
+
+.socials--footer {
+  flex-direction: row;
+  margin: 0;
+  padding: 0;
+  min-width: 110px;
+}
+
+.socials--footer li {
+  margin-right: 25px;
+  margin-bottom: 0;
+
+  &:last-child {
+    margin-right: 0;
+  }
+}

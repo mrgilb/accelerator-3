@@ -1,0 +1,103 @@
+.address {
+  padding: 64px 0;
+  padding-bottom: 20px;
+  border-top: 1px solid #74819c;
+  display: flex;
+  min-height: 200px;
+  flex-direction: column;
+}
+
+.address h2 {
+  font-family: $bebas700;
+  font-size: 49px;
+  line-height: 49px;
+  letter-spacing: 0.03em;
+  text-align: left;
+  color: #102654;
+  margin: 0;
+  margin-left: 120px;
+}
+
+.address address {
+  margin-left: 120px;
+  width: 82%;
+  max-width: 567px;
+
+  @media (max-width: 1365px) {
+    width: 80%;
+  }
+}
+
+.address__list {
+  margin: 0;
+  margin-top: 46px;
+  padding: 0;
+  list-style: none;
+  column-count: 2;
+  position: relative;
+
+  &::after {
+    content: "";
+    position: absolute;
+    height: 76%;
+    width: 1px;
+    background-color: #74819c;
+    top: 0;
+    right: 0;
+    margin-right: 58.5%;
+    margin-top: 5px;
+  }
+}
+
+.address__list li {
+  width: 180px;
+  display: block;
+  margin-bottom: 20px;
+
+  &:nth-child(-n+2) {
+    margin-right: 20px;
+  }
+}
+
+.address__list p {
+  font-family: $roboto700;
+  font-size: 16px;
+  font-weight: 700;
+  line-height: 24px;
+  text-align: left;
+  color: #102654;
+  font-style: normal;
+  margin: 0;
+  margin-left: 2px;
+  margin-bottom: 2px;
+}
+
+.address__list a {
+  display: block;
+  font-family: $roboto400;
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 21px;
+  text-align: left;
+  color: #102654;
+  font-style: normal;
+  text-decoration: none;
+  margin-left: 2px;
+  transition: $allease;
+
+  &::after {
+    text-decoration: overline;
+  }
+}
+
+.address__list span {
+  display: block;
+  font-family: $roboto400;
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 21px;
+  text-align: left;
+  color: #102654;
+  font-style: normal;
+  margin-left: 2px;
+}
