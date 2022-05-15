@@ -22,6 +22,10 @@
     bottom: 0;
     margin-bottom: -10px;
   }
+
+  @media (max-width: $vp-1200) {
+    margin-top: 30px;
+  }
 }
 
 .tabs__controls li {
@@ -50,7 +54,7 @@
   position: relative;
   transition: $allease;
 
-  &:after {
+  &::after {
     content: "";
     height: 2px;
     width: 84%;
@@ -66,6 +70,10 @@
 
 .tabs__content {
   margin-top: 48px;
+
+  @media (max-width: $vp-1200) {
+    margin-top: 55px;
+  }
 }
 
 .tabs__content ul {
@@ -74,6 +82,10 @@
   list-style: none;
   display: flex;
   flex-wrap: wrap;
+
+  @media (max-width: $vp-1200) {
+    flex-direction: column;
+  }
 }
 
 .tabs__content .tabs__content-item {
@@ -87,6 +99,15 @@
   display: flex;
   flex-direction: column;
 
+  @media (max-width: $vp-1200) {
+    margin: 0 auto 40px;
+    width: 65.5%;
+
+    &:nth-child(3n) {
+      margin: 0 auto;
+    }
+  }
+
   &:nth-child(3n) {
     margin-right: 0;
   }
@@ -94,11 +115,11 @@
   &:hover {
     border: 7px solid;
     padding: 56px 70px;
-    border-image: linear-gradient(148.82deg, #D10A42 0.85%, #00359F 100%);
+    border-image: linear-gradient(148.82deg, #d10a42 0.85%, #00359f 100%);
     border-image-slice: 1;
 
     a {
-      background: linear-gradient(97.05deg, #ED0233 17.6%, #003EB7 95.31%);
+      background: linear-gradient(97.05deg, #ed0233 17.6%, #003eb7 95.31%);
       border: none;
       color: #ffffff;
       padding: 25px 42px;
@@ -144,11 +165,13 @@
     font-size: 100px;
     font-weight: 700;
     line-height: 150px;
-    text-align: left;
+    text-align: center;
     color: transparent;
     text-shadow: 0 0 0 rgba(232, 232, 232, 0.48);
     top: 0;
     left: 0;
+    right: 0;
+    margin: 0 auto;
     margin-top: -55px;
   }
 }
@@ -181,9 +204,14 @@
   border: 2px solid #102654;
 
   &:hover {
-    background: linear-gradient(97.05deg, #ED0233 17.6%, #003EB7 95.31%);
+    background: linear-gradient(97.05deg, #ed0233 17.6%, #003eb7 95.31%);
     border: none;
     color: #ffffff;
     padding: 24px 42px;
+  }
+
+  @media (max-width: $vp-1200) {
+    width: 206px;
+    margin: 35px auto 0;
   }
 }

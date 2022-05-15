@@ -1,7 +1,14 @@
 .header {
-  background: conic-gradient(from 130.31deg at 16.03% 39.06%, #B80027 -46.69deg, #003D85 32.24deg, #B80027 313.31deg, #003D85 392.24deg);
+  background: conic-gradient(from 130.31deg at 16.03% 39.06%, #b80027 -46.69deg, #003d85 32.24deg, #b80027 313.31deg, #003d85 392.24deg);
   padding: 25px 20px 5px;
   box-sizing: border-box;
+
+  @media (max-width: $vp-1200) {
+    background: conic-gradient(from 139.4deg at 20.7% 35.74%, #b80027 -46.69deg, #003d85 32.24deg, #b80027 313.31deg, #003d85 392.24deg);
+    padding-left: 45px;
+    padding-right: 45px;
+    padding-top: 38px;
+  }
 }
 
 .header__wrapper {

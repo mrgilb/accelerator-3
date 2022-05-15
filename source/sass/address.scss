@@ -5,6 +5,19 @@
   display: flex;
   min-height: 200px;
   flex-direction: column;
+
+  @media (max-width: $vp-1200) {
+    border: none;
+    padding: 45px;
+    padding-top: 53px;
+  }
+}
+
+.address__wrapper {
+  @media (max-width: $vp-1200) {
+    margin: 0 auto;
+    width: 74%;
+  }
 }
 
 .address h2 {
@@ -16,6 +29,14 @@
   color: #102654;
   margin: 0;
   margin-left: 120px;
+
+  @media (max-width: $vp-1200) {
+    font-size: 42px;
+    line-height: 42px;
+    letter-spacing: 0.03em;
+    text-align: left;
+    margin: 0;
+  }
 }
 
 .address address {
@@ -25,6 +46,12 @@
 
   @media (max-width: 1365px) {
     width: 80%;
+  }
+
+  @media (max-width: $vp-1200) {
+    width: 100%;
+    max-width: 100%;
+    margin: 0 auto;
   }
 }
 
@@ -44,8 +71,21 @@
     background-color: #74819c;
     top: 0;
     right: 0;
+    left: 0;
     margin-right: 58.5%;
     margin-top: 5px;
+
+    @media (max-width: $vp-1200) {
+      margin-right: 0;
+      margin-left: 53%;
+      margin-top: 5px;
+      height: 81%;
+    }
+  }
+
+  @media (max-width: $vp-1200) {
+    margin-top: 39px;
+    gap: 120px;
   }
 }
 
@@ -54,8 +94,8 @@
   display: block;
   margin-bottom: 20px;
 
-  &:nth-child(-n+2) {
-    margin-right: 20px;
+  @media (max-width: $vp-1200) {
+    width: 220px;
   }
 }
 
@@ -70,6 +110,14 @@
   margin: 0;
   margin-left: 2px;
   margin-bottom: 2px;
+
+  @media (max-width: $vp-1200) {
+    font-size: 20px;
+    font-weight: 700;
+    line-height: 30px;
+    text-align: left;
+    margin-left: 0;
+  }
 }
 
 .address__list a {
@@ -88,6 +136,14 @@
   &::after {
     text-decoration: overline;
   }
+
+  @media (max-width: $vp-1200) {
+    font-size: 18px;
+    font-weight: 400;
+    line-height: 27px;
+    text-align: left;
+    margin-left: 0;
+  }
 }
 
 .address__list span {
@@ -100,4 +156,11 @@
   color: #102654;
   font-style: normal;
   margin-left: 2px;
+
+  @media (max-width: $vp-1200) {
+    font-size: 18px;
+    font-weight: 400;
+    line-height: 27px;
+    text-align: left;
+  }
 }

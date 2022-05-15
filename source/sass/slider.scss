@@ -2,6 +2,11 @@
   padding: 0 20px;
   margin: 35px auto 0;
   position: relative;
+
+  @media (max-width: $vp-1200) {
+    margin-top: 25px;
+    width: 638px;
+  }
 }
 
 .slider__controls {
@@ -24,6 +29,10 @@
   max-width: 1160px;
   margin: 0 auto;
   overflow: hidden;
+
+  @media (max-width: $vp-1200) {
+    width: 568px;
+  }
 }
 
 .slider__slides ul {
@@ -41,7 +50,7 @@
   transition: $allease;
 
   &:hover {
-    box-shadow: 0px 0px 35px rgba(42, 59, 99, 0.17);
+    box-shadow: 0 0 35px rgba(42, 59, 99, 0.17);
   }
 
   &:hover .slider__card-container {
@@ -79,6 +88,11 @@
   &:focus .slider__list-awards {
     display: flex;
   }
+
+  @media (max-width: $vp-1200) {
+    min-width: 268px;
+    margin-right: 31px;
+  }
 }
 
 .slider__image-container {
@@ -87,10 +101,15 @@
   grid-column: 1/-1;
 }
 
-.slider__image-container image {
+.slider__image-container img {
   display: block;
   width: 260px;
   height: auto;
+
+  @media (max-width: $vp-1200) {
+    width: 268px;
+    height: 294px;
+  }
 }
 
 .slider__card-container {
@@ -147,4 +166,3 @@
 .slider__list-awards li {
   margin-bottom: 13px;
 }
-

@@ -3,6 +3,11 @@
   padding-bottom: 36px;
   box-sizing: border-box;
   background-color: #030a1a;
+
+  @media (max-width: $vp-1200) {
+    padding: 48px 45px;
+    padding-bottom: 38px;
+  }
 }
 
 .footer__wrapper {

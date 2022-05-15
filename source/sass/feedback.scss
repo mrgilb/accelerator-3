@@ -1,10 +1,17 @@
 .feedback {
   padding: 59px 0;
+  box-sizing: border-box;
   background-color: #102654;
   min-height: 223px;
   padding-bottom: 55px;
   display: flex;
   justify-content: flex-end;
+
+  @media (max-width: $vp-1200) {
+    justify-content: center;
+    padding-top: 64px;
+    padding-bottom: 55px;
+  }
 }
 
 .feedback form {
@@ -12,6 +19,13 @@
   max-width: 410px;
   display: flex;
   flex-wrap: wrap;
+
+  @media (max-width: $vp-1200) {
+    max-width: 65%;
+    min-height: 205px;
+    margin-right: 0;
+    justify-content: space-between;
+  }
 }
 
 .feedback h2 {
@@ -23,10 +37,22 @@
   color: #ffffff;
   margin: 0;
   text-transform: uppercase;
+
+  @media (max-width: $vp-1200) {
+    font-size: 42px;
+    line-height: 42px;
+    letter-spacing: 0.03em;
+    width: 100%;
+  }
 }
 
 .feedback label {
   align-self: flex-start;
+
+  @media (max-width: $vp-1200) {
+    width: 47%;
+    margin-top: 26px;
+  }
 }
 
 .feedback input {
@@ -53,6 +79,11 @@
     text-align: left;
     color: #ffffff;
   }
+
+  @media (max-width: $vp-1200) {
+    margin: 0;
+    width: 88%;
+  }
 }
 
 .feedback input[type="tel"] {
@@ -66,7 +97,7 @@
   font-weight: 700;
   line-height: 16px;
   letter-spacing: 0.05em;
-  text-align: left;
+  text-align: center;
   color: #ffffff;
   align-self: flex-start;
   background-color: transparent;
@@ -87,5 +118,9 @@
     color: #9ed7ee;
     border: 3px solid #9ed7ee;
     outline: none;
+  }
+
+  @media (max-width: $vp-1200) {
+    width: 95%;
   }
 }

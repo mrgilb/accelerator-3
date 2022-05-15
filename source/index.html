@@ -18,12 +18,12 @@
     <nav class="nav">
       <ul>
         <li>
-          <a>
+          <a class="logo">
             <img src="./img/svg/logo.svg" width="89" height="20" alt="logo">
           </a>
         </li>
         <li>
-          <a href="tel:+78005555555">8-800-555-55-55</a>
+          <a href="tel:+78005555555" class="nav__link-header">8-800-555-55-55</a>
         </li>
       </ul>
     </nav>
@@ -73,7 +73,9 @@
           </p>
         </div>
         <div class="about__iamge-container">
-          <img src="./img/about-bg-desktop.png" width="660" height="401" alt="Изображение тренажерного зала">
+          <picture>
+            <img src="./img/about-bg-desktop.png" width="660" height="401" srcset="./img/about-bg-desktop@2x.png 2x" alt="Изображение тренажерного зала">
+          </picture>
         </div>
         <div class="preview about__video">
           <img src="./img/preview-desktop.png" width="364" height="228" alt="">
@@ -332,7 +334,8 @@
             Современные тренажеры на все группы мышц
           </p>
         </li>
-        <li class="advantages__item advantages__item--fourth advantages__item--border-top advantages__item--border-top-to-left">
+        <li
+          class="advantages__item advantages__item--fourth advantages__item--border-top advantages__item--border-top-to-left">
           <div>
             <p>
               350
@@ -385,7 +388,7 @@
           <li>
             <h4>Месяц бесплатно</h4>
             <p>
-              Приведи друга, получи абонемент в&nbsp;подарок
+              Приведи друга, получи <br class="discount__br-tablet"> абонемент  в&nbsp;подарок
             </p>
             <a href="#">подробнее</a>
           </li>
@@ -422,19 +425,19 @@
             </div>
             <div>
               <h3>Lorem Ipsum</h3>
-            <p>
-              Lorem Ipsum&nbsp;&mdash; это текст-&laquo;рыба&raquo;, часто используемый в&nbsp;печати
-              и&nbsp;вэб-дизайне.
-              Lorem Ipsum является стандартной &laquo;рыбой&raquo; для текстов на&nbsp;латинице с&nbsp;начала
-              XVI&nbsp;века.
-              В&nbsp;то&nbsp;время некий безымянный печатник создал большую коллекцию размеров и&nbsp;форм шрифтов,
-              используя Lorem Ipsum для распечатки образцов. Lorem Ipsum не&nbsp;только успешно пережил без заметных
-              изменений пять веков,
-              но&nbsp;и&nbsp;перешагнул в&nbsp;электронный дизайн.
-              Его популяризации в&nbsp;новое время послужили публикация листов Letraset с&nbsp;образцами
-              Lorem Ipsum в&nbsp;60-х годах&nbsp;и, в&nbsp;более недавнее время, программы электронной вёрстки типа
-              Aldus PageMaker, в&nbsp;шаблонах которых используется Lorem Ipsum.
-            </p>
+              <p>
+                Lorem Ipsum&nbsp;&mdash; это текст-&laquo;рыба&raquo;, часто используемый в&nbsp;печати
+                и&nbsp;вэб-дизайне.
+                Lorem Ipsum является стандартной &laquo;рыбой&raquo; для текстов на&nbsp;латинице с&nbsp;начала
+                XVI&nbsp;века.
+                В&nbsp;то&nbsp;время некий безымянный печатник создал большую коллекцию размеров и&nbsp;форм шрифтов,
+                используя Lorem Ipsum для распечатки образцов. Lorem Ipsum не&nbsp;только успешно пережил без заметных
+                изменений пять веков,
+                но&nbsp;и&nbsp;перешагнул в&nbsp;электронный дизайн.
+                Его популяризации в&nbsp;новое время послужили публикация листов Letraset с&nbsp;образцами
+                Lorem Ipsum в&nbsp;60-х годах&nbsp;и, в&nbsp;более недавнее время, программы электронной вёрстки типа
+                Aldus PageMaker, в&nbsp;шаблонах которых используется Lorem Ipsum.
+              </p>
             </div>
           </li>
         </ul>
@@ -462,27 +465,29 @@
         </form>
       </div>
       <div class="address">
-        <h2>Контакты</h2>
-        <address>
-          <ul class="address__list">
-            <li>
-              <p>Адрес:</p>
-              <a href="https://yandex.ru/maps/-/CCUFV0SO3C">г. Омск, ул. 60 лет Октября, 7</a>
-            </li>
-            <li>
-              <p>График работы:</p>
-              <span>Пн-Вс: с 8:00 до 22:00</span>
-            </li>
-            <li>
-              <p>Телефон:</p>
-              <a href="tel:+78005555555">8-800-555-55-55</a>
-            </li>
-            <li>
-              <p>Email:</p>
-              <a href="mailto:omsk@supergym.ru">omsk@supergym.ru</a>
-            </li>
-          </ul>
-        </address>
+        <div class="address__wrapper">
+          <h2>Контакты</h2>
+          <address>
+            <ul class="address__list">
+              <li>
+                <p>Адрес:</p>
+                <a href="https://yandex.ru/maps/-/CCUFV0SO3C">г. Омск, ул. 60 лет Октября, 7</a>
+              </li>
+              <li>
+                <p>График работы:</p>
+                <span>Пн-Вс: с 8:00 до 22:00</span>
+              </li>
+              <li>
+                <p>Телефон:</p>
+                <a href="tel:+78005555555">8-800-555-55-55</a>
+              </li>
+              <li>
+                <p>Email:</p>
+                <a href="mailto:omsk@supergym.ru">omsk@supergym.ru</a>
+              </li>
+            </ul>
+          </address>
+        </div>
       </div>
     </section>
 
@@ -492,7 +497,7 @@
       <nav class="nav nav--footer">
         <ul>
           <li>
-            <a>
+            <a class="logo logo--footer">
               <img src="./img/svg/logo.svg" width="89" height="20" alt="logo">
             </a>
           </li>
@@ -541,7 +546,6 @@
       </ul>
     </div>
   </footer>
-
   <script src="./js/main.min.js" type="module" async></script>
 </body>
 

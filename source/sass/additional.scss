@@ -3,4 +3,10 @@
   grid-template-columns: 1fr 1fr;
   margin-top: 98px;
   align-items: flex-start;
+
+  @media (max-width: $vp-1200) {
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr 1fr;
+    margin-top: 78px;
+  }
 }

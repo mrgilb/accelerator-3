@@ -13,18 +13,58 @@
     position: static;
     min-width: 500px;
     width: 47%;
-    background-image: url("../img/promo-bg-desktop.png");
+
+    @media (min-width: 768px) {
+      background-image: url("../img/promo-bg-tablet.png");
+
+      @media (min-resolution: $retina-dppx) {
+        background-image: url("../img/promo-bg-tablet@2x.png");
+      }
+    }
+
+    @media (min-width: 1200px) {
+      background-image: url("../img/promo-bg-desktop.png");
+
+      @media (min-resolution: $retina-dppx) {
+        background-image: url("../img/promo-bg-desktop@2x.png");
+      }
+    }
+
     background-repeat: no-repeat;
     background-position: center top;
     background-size: 100% auto;
     margin-right: auto;
     margin-left: 64px;
+
+    @media (max-width: $vp-1200) {
+      align-self: flex-start;
+      min-height: 390px;
+      min-width: 324px;
+      margin-top: 20px;
+      margin-left: 0;
+      background-size: cover;
+      width: 100%;
+    }
+  }
+
+  @media (max-width: $vp-1200) {
+    margin-left: 0;
+    min-height: 487px;
+    width: 100%;
+    display: grid;
+    grid-template-columns: min-content 1fr;
+    gap: 28px;
   }
 }
 
 .promo__text-container {
   margin-top: 111px;
   max-width: 377px;
+
+  @media (max-width: $vp-1200) {
+    margin-top: 69px;
+    max-width: 326px;
+  }
 }
 
 .promo span {
@@ -37,6 +77,14 @@
   letter-spacing: 0.03em;
   text-align: right;
   color: #ffffff;
+
+  @media (max-width: $vp-1200) {
+    font-size: 34px;
+    font-weight: 400;
+    line-height: 41px;
+    letter-spacing: 0.03em;
+    text-align: right;
+  }
 }
 
 .promo h1 {
@@ -53,7 +101,16 @@
   color: #ffffff;
   text-transform: uppercase;
   position: relative;
+
+  @media (max-width: $vp-1200) {
+    font-size: 86px;
+    line-height: 86px;
+    letter-spacing: 0.03em;
+    text-align: right;
+    margin-left: 90px;
+  }
 }
+
 .promo ul {
   margin: 0;
   margin-right: 30px;
@@ -62,6 +119,10 @@
   list-style: none;
   width: max-content;
   float: left;
+
+  @media (max-width: $vp-1200) {
+    margin-top: 10px;
+  }
 }
 
 .promo li {
@@ -90,16 +151,22 @@
   text-decoration: none;
   text-transform: uppercase;
   padding: 20px 52px;
-  border: 4px solid #FFFFFF;
+  border: 4px solid #ffffff;
   transition: $allease;
 
   &:hover {
-    text-shadow:5px 5px 5px #333333;
+    text-shadow: 5px 5px 5px #333333;
   }
 
   &:focus {
-    text-shadow:5px 5px 5px #333333;
+    text-shadow: 5px 5px 5px #333333;
     outline: none;
   }
-}
 
+  @media (max-width: $vp-1200) {
+    padding: 20px 0;
+    margin-left: 139px;
+    margin-top: 44px;
+    min-width: 187px;
+  }
+}

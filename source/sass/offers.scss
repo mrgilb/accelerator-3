@@ -11,19 +11,39 @@
     content: "";
     position: absolute;
     z-index: -1;
-    width: 286px;
-    height: 384px;
     bottom: 0;
     right: 0;
     margin-bottom: -96px;
-    background-image: url("../img/offers-bg-desktop.png");
 
-    @media (min-resolution: $retina-dppx) {
-      background-image: url("../img/offers-bg-desktop@2x.png");
+    @media (min-width: 768px) {
+      width: 309px;
+      height: 443px;
+      margin-bottom: -124px;
+      background-image: url("../img/offers-bg-tablet.png");
+
+      @media (min-resolution: $retina-dppx) {
+        background-image: url("../img/offers-bg-tablet@2x.png");
+      }
     }
+
+    @media (min-width: 1200px) {
+      width: 286px;
+      height: 384px;
+      background-image: url("../img/offers-bg-desktop.png");
+
+      @media (min-resolution: $retina-dppx) {
+        background-image: url("../img/offers-bg-desktop@2x.png");
+      }
+    }
+
     background-size: cover;
     background-repeat: no-repeat;
     background-position: right;
+  }
+
+  @media (max-width: $vp-1200) {
+    margin-top: 96px;
+    padding: 96px 45px 100px;
   }
 }
 
@@ -36,4 +56,11 @@
   letter-spacing: 0.03em;
   text-align: center;
   margin: 0;
+
+  @media (max-width: $vp-1200) {
+    font-size: 42px;
+    line-height: 42px;
+    letter-spacing: 0.03em;
+    text-align: center;
+  }
 }
