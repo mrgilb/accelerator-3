@@ -19,5 +19,10 @@
     right: 0;
     background-image: url("../img/svg/arrow.svg");
     background-size: cover;
+
+    @media (max-width: $vp-768) {
+      width: 10px;
+      height: 19px;
+    }
   }
 }

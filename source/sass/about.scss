@@ -6,6 +6,11 @@
     padding: 0 45px;
     margin-top: 62px;
   }
+
+  @media (max-width: $vp-768) {
+    padding: 0;
+    margin-top: 39px;
+  }
 }
 
 .about__wrapper {
@@ -19,6 +24,10 @@
     grid-template-columns: 1fr;
     grid-template-rows: min-content minmax(476px, 1fr);
   }
+
+  @media (max-width: $vp-768) {
+    grid-template-rows: min-content min-content minmax(187px, 1fr);
+  }
 }
 
 .about__text {
@@ -27,6 +36,10 @@
 
   @media (max-width: $vp-1200) {
     margin-left: 0;
+  }
+
+  @media (max-width: $vp-768) {
+    min-width: 100%;
   }
 }
 
@@ -45,6 +58,14 @@
     line-height: 42px;
     letter-spacing: 0.03em;
   }
+
+  @media (max-width: $vp-768) {
+    font-size: 32px;
+    line-height: 32px;
+    letter-spacing: 0.03em;
+    padding: 0 15px;
+    text-align: left;
+  }
 }
 
 .about__text span {
@@ -58,6 +79,11 @@
 
   @media (max-width: $vp-1200) {
     text-align: center;
+  }
+
+  @media (max-width: $vp-768) {
+    text-align: left;
+    padding: 0 15px;
   }
 }
 
@@ -74,6 +100,14 @@
     text-align: center;
     margin: 34px auto 0;
     max-width: 85%;
+  }
+
+  @media (max-width: $vp-768) {
+    text-align: left;
+    max-width: 81%;
+    margin: 23px 0;
+    margin-right: auto;
+    padding: 0 15px;
   }
 }
 
@@ -94,6 +128,12 @@
     grid-row: 2/3;
     margin-top: 44px;
   }
+
+  @media (max-width: $vp-768) {
+    margin-top: 10px;
+    grid-column: auto;
+    grid-row: auto;
+  }
 }
 
 .about__iamge-container img {
@@ -106,6 +146,11 @@
     width: 100%;
     max-height: 345px;
     object-fit: cover;
+  }
+
+  @media (max-width: $vp-768) {
+    max-height: 100%;
+    min-height: 313px;
   }
 }
 
@@ -121,6 +166,15 @@
     margin: 0 auto;
     width: 39.1%;
   }
+
+  @media (max-width: $vp-768) {
+    align-self: flex-start;
+    margin-top: 40px;
+    width: 100%;
+    height: 100%;
+    grid-column: auto;
+    grid-row: auto;
+  }
 }
 
 .about__video img {
@@ -128,5 +182,14 @@
     width: 100%;
     height: auto;
     object-fit: cover;
+  }
+
+  @media (min-width: 320px) and (max-width: 340px){
+    height: 167px;
+    display: block;
+  }
+
+  @media (min-width: 341px) and (max-width: $vp-768) {
+    height: auto;
   }
 }

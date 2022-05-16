@@ -45,6 +45,11 @@
     margin-top: 96px;
     padding: 96px 45px 100px;
   }
+
+  @media (max-width: $vp-768) {
+    padding: 66px 15px 72px;
+    margin-top: 70px;
+  }
 }
 
 
@@ -60,6 +65,13 @@
   @media (max-width: $vp-1200) {
     font-size: 42px;
     line-height: 42px;
+    letter-spacing: 0.03em;
+    text-align: center;
+  }
+
+  @media (max-width: $vp-768) {
+    font-size: 32px;
+    line-height: 32px;
     letter-spacing: 0.03em;
     text-align: center;
   }

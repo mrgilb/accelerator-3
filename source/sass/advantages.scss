@@ -7,6 +7,11 @@
     padding: 96px 45px;
     padding-bottom: 56px;
   }
+
+  @media (max-width: $vp-768) {
+    padding: 67px 0;
+    padding-bottom: 63px;
+  }
 }
 
 .advantages h2 {
@@ -22,6 +27,12 @@
     line-height: 42px;
     letter-spacing: 0.03em;
     text-align: center;
+  }
+
+  @media (max-width: $vp-768) {
+    font-size: 32px;
+    line-height: 32px;
+    letter-spacing: 0.03em;
   }
 }
 
@@ -46,6 +57,11 @@
     column-gap: 34px;
     justify-items: center;
   }
+
+  @media (max-width: $vp-768) {
+    grid-template-columns: 1fr;
+    gap: 23px;
+  }
 }
 
 .advantages__item {
@@ -54,6 +70,14 @@
   min-height: 128px;
   align-items: flex-start;
   position: relative;
+
+  @media (max-width: $vp-768) {
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    width: 100%;
+    max-width: 100%;
+  }
 }
 
 .advantages__item--border-top {
@@ -83,6 +107,11 @@
   display: flex;
   flex-direction: column;
   height: 100%;
+
+  @media (max-width: $vp-768) {
+    position: relative;
+    width: 100%;
+  }
 }
 
 
@@ -103,6 +132,11 @@
     text-align: left;
     margin-top: 15px;
     margin-bottom: 2px;
+  }
+
+  @media (max-width: $vp-768) {
+    text-align: center;
+    margin-top: 8px;
   }
 }
 
@@ -126,6 +160,11 @@
     line-height: 87px;
     text-align: left;
   }
+
+  @media (max-width: $vp-768) {
+    margin-right: auto;
+    margin-left: auto;
+  }
 }
 
 .advantages__item--fourth p {
@@ -145,6 +184,12 @@
   text-align: left;
   color: #102654;
   background: none;
+
+  @media (max-width: $vp-768) {
+    text-align: center;
+    margin: 0 auto;
+    max-width: 71%;
+  }
 }
 
 .advantages__item span {
@@ -156,10 +201,19 @@
   position: absolute;
   bottom: 0;
   left: 0;
+  right: 0;
   margin-bottom: 21px;
 
   @media (max-width: $vp-1200) {
     margin-bottom: 39px;
+  }
+
+  @media (max-width: $vp-768) {
+    margin: 0 auto;
+    margin-bottom: -2px;
+    margin-top: -7px;
+    text-align: center;
+    width: 100%;
   }
 }
 
@@ -188,6 +242,13 @@
     max-width: 100%;
     width: 65.3%;
     padding: 31px 34px;
+  }
+
+  @media (max-width: $vp-768) {
+    align-self: start;
+    margin: 19px auto 3px;
+    grid-column: auto;
+    width: 100%;
   }
 }
 
@@ -250,5 +311,11 @@
     text-align: center;
     margin: 16px auto 0;
     max-width: 180px;
+  }
+
+  @media (max-width: $vp-768) {
+    @media (max-width: $vp-768) {
+      margin-top: 10px;
+    }
   }
 }

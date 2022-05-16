@@ -4,6 +4,10 @@
   @media (max-width: $vp-1200) {
     padding: 20px 45px;
   }
+
+  @media (max-width: $vp-768) {
+    padding: 20px 15px;
+  }
 }
 
 .comments h2 {
@@ -17,6 +21,12 @@
   @media (max-width: $vp-1200) {
     font-size: 42px;
     line-height: 42px;
+    letter-spacing: 0.03em;
+  }
+
+  @media (max-width: $vp-768) {
+    font-size: 32px;
+    line-height: 32px;
     letter-spacing: 0.03em;
   }
 }

@@ -8,10 +8,19 @@
     padding: 48px 45px;
     padding-bottom: 38px;
   }
+
+  @media (max-width: $vp-768) {
+    padding: 45px 15px;
+    padding-top: 49px;
+  }
 }
 
 .footer__wrapper {
   max-width: 1160px;
   margin: 0 auto;
   display: flex;
+
+  @media (max-width: $vp-768) {
+    flex-direction: column;
+  }
 }

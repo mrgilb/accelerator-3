@@ -4,6 +4,11 @@
     width: 82px;
     height: 17px;
   }
+
+  @media (max-width: $vp-768) {
+    width: 68px;
+    height: 15px;
+  }
 }
 
 .logo--footer img {

@@ -3,6 +3,10 @@
   margin: 0 auto;
   overflow: hidden;
   position: relative;
+
+  @media (max-width: $vp-768) {
+    width: 290px;
+  }
 }
 
 .accordion__controls {
@@ -17,6 +21,16 @@
   @media (max-width: $vp-1200) {
     margin-top: 150px;
   }
+
+  @media (max-width: $vp-768) {
+    margin-top: 203px;
+  }
+}
+
+.accordion__back {
+  @media (max-width: $vp-768) {
+    margin-left: -6px;
+  }
 }
 
 .accordion__list {
@@ -29,6 +43,10 @@
   @media (max-width: $vp-1200) {
     margin-top: 45px;
     margin-left: 14px;
+  }
+
+  @media (max-width: $vp-768) {
+    margin-left: 0;
   }
 }
 
@@ -47,10 +65,35 @@
     width: 566px;
     padding-bottom: 57px;
   }
+
+  @media (max-width: $vp-768) {
+    padding: 40px 25px;
+    padding-bottom: 35px;
+    align-items: center;
+    width: 226px;
+    min-height: 335px;
+    margin: 0 32px;
+    flex-direction: column;
+  }
 }
 
 .accordion__image-container {
   margin-right: 28px;
+
+  @media (max-width: $vp-768) {
+    margin-right: 0;
+    display: flex;
+    align-items: center
+  }
+}
+
+.accordion__image-container img {
+  @media (max-width: $vp-768) {
+    width: 68px;
+    height: 68px;
+    margin-left: 16px;
+    margin-right: 14px;
+  }
 }
 
 .accordion__list h3 {
@@ -61,6 +104,10 @@
   text-align: left;
   color: #ffffff;
   margin: 0;
+
+  @media (max-width: $vp-768) {
+    line-height: 26px;
+  }
 }
 
 .accordion__list p {
@@ -73,4 +120,9 @@
   max-height: 90px;
   margin-bottom: 0;
   overflow-y: auto;
+
+  @media (max-width: $vp-768) {
+    text-align: center;
+    max-height: 178px;
+  }
 }

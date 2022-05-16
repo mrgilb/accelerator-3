@@ -12,6 +12,11 @@
     padding-top: 64px;
     padding-bottom: 55px;
   }
+
+  @media (max-width: $vp-768) {
+    width: 100%;
+    padding-bottom: 56px;
+  }
 }
 
 .feedback form {
@@ -26,6 +31,11 @@
     min-height: 205px;
     margin-right: 0;
     justify-content: space-between;
+  }
+
+  @media (max-width: $vp-768) {
+    max-width: 100%;
+    padding: 0 15px;
   }
 }
 
@@ -45,6 +55,13 @@
     letter-spacing: 0.03em;
     width: 100%;
   }
+
+  @media (max-width: $vp-768) {
+    font-size: 32px;
+    line-height: 32px;
+    letter-spacing: 0.03em;
+    text-align: left;
+  }
 }
 
 .feedback label {
@@ -53,6 +70,16 @@
   @media (max-width: $vp-1200) {
     width: 47%;
     margin-top: 26px;
+  }
+
+  @media (max-width: $vp-768) {
+      width: 100%;
+      margin-top: 43px;
+
+      &:nth-child(3n) {
+        margin-top: 33px;
+        margin-bottom: 39px;
+      }
   }
 }
 
@@ -84,6 +111,10 @@
   @media (max-width: $vp-1200) {
     margin: 0;
     width: 88%;
+  }
+
+  @media (max-width: $vp-768) {
+    width: 100%;
   }
 }
 
@@ -123,5 +154,10 @@
 
   @media (max-width: $vp-1200) {
     width: 95%;
+    padding: 17px 20px;
+  }
+
+  @media (max-width: $vp-768) {
+    width: 100%;
   }
 }

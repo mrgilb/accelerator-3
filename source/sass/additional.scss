@@ -9,4 +9,10 @@
     grid-template-rows: 1fr 1fr;
     margin-top: 78px;
   }
+
+  @media (max-width: $vp-768) {
+    margin-top: 48px;
+    grid-template-columns: 1fr;
+    grid-template-rows: min-content 1fr;
+  }
 }
