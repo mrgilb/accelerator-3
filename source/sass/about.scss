@@ -109,13 +109,13 @@
     margin-right: auto;
     padding: 0 15px;
   }
-}
 
-.about__text .about__text-desktop {
-  margin-top: 10px;
+  &:nth-child(2n + 1) {
+    margin-top: 10px;
 
-  @media (max-width: $vp-1200) {
-    display: none;
+    @media (max-width: $vp-1200) {
+      display: none;
+    }
   }
 }
 

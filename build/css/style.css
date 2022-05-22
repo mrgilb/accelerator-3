@@ -830,7 +830,7 @@ html {
   margin-bottom: 0;
 }
 
-.about__text .about__text-desktop {
+.about__text p:nth-child(2n + 1) {
   margin-top: 10px;
 }
 
@@ -2938,7 +2938,7 @@ html {
     max-width: 85%;
   }
 
-  .about__text .about__text-desktop {
+  .about__text p:nth-child(2n + 1) {
     display: none;
   }
 
