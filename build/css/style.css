@@ -555,6 +555,10 @@ html {
   user-select: none;
 }
 
+.nav--footer a:hover {
+  color: #87ceeb;
+}
+
 .promo {
   width: 79.9%;
   min-height: 602px;

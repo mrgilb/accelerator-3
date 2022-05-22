@@ -102,6 +102,10 @@
   text-align: left;
   user-select: none;
 
+  &:hover {
+    color: #87ceeb;
+  }
+
   @media (max-width: $vp-1200) {
     font-size: 14px;
     font-weight: 400;
