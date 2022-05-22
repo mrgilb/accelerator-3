@@ -29,6 +29,7 @@
     @media (min-width: 1200px) {
       width: 286px;
       height: 384px;
+      margin-bottom: -96px;
       background-image: url("../img/offers-bg-desktop.png");
 
       @media (min-resolution: $retina-dppx) {
@@ -47,8 +48,8 @@
   }
 
   @media (max-width: $vp-768) {
-    padding: 66px 15px 72px;
-    margin-top: 70px;
+    padding: 66px 15px 74px;
+    margin-top: 83px;
   }
 }
 

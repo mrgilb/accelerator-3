@@ -1,5 +1,5 @@
-import './modules/headerFixed.js';
-import './modules/callbackPopup.js';
 import './modules/validationTel.js';
-import './modules/moreText.js';
-import './modules/accordion.js';
+import './modules/carousel.js';
+import './modules/playvideo.js';
+import './modules/tabs.js';
+import './modules/slider.js';

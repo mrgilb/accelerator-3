@@ -5,12 +5,12 @@
 
   @media (max-width: $vp-1200) {
     margin-top: 25px;
-    width: 638px;
+    width: 94%;
   }
 
   @media (max-width: $vp-768) {
     padding: 0;
-    width: 290px;
+    width: 100%;
   }
 }
 
@@ -23,13 +23,17 @@
   top: 0;
   left: 0;
   right: 0;
-  margin: 0 auto;
+  margin: 151px auto 0;
   padding: 0 2px;
-  margin-top: 150px;
+
+  @media (max-width: $vp-1200) {
+    margin-top: 22.2%;
+  }
 
   @media (max-width: $vp-768) {
     padding: 0;
     width: 100%;
+    margin-top: 51%;
   }
 }
 
@@ -40,26 +44,48 @@
 }
 
 .slider__slides {
-  width: 100%;
-  padding: 20px 0;
+  width: calc(100% - 40px);
+  padding: 20px;
   max-width: 1160px;
+  min-height: 294px;
   margin: 0 auto;
-  overflow: hidden;
+  overflow-x: hidden;
+  position: relative;
 
   @media (max-width: $vp-1200) {
-    width: 568px;
+    width: 89%;
+    min-height: min-content;
+    padding: 26.9% 20px;
   }
 
   @media (max-width: $vp-768) {
-    width: 226px;
+    width: 78%;
+    min-height: min-content;
+    padding: 50.9% 20px;
   }
 }
 
 .slider__slides ul {
   margin: 0;
+  margin-left: 1.7%;
+  margin-top: 20px;
   padding: 0;
   list-style: none;
   display: flex;
+  position: absolute;
+  left: 0;
+  top: 0;
+  transition: $allease;
+
+  @media (max-width: $vp-1200) {
+    margin-left: 3.5%;
+    width: 146.3%;
+    left: -98.4%;
+  }
+
+  @media (max-width: $vp-768) {
+    margin-left: 7.5%;
+  }
 }
 
 .slider__slides .slider__item {
@@ -110,25 +136,37 @@
   }
 
   @media (max-width: $vp-1200) {
-    min-width: 268px;
-    margin-right: 31px;
+    min-width: 30.2%;
+    margin-right: 3.4%;
   }
 
   @media (max-width: $vp-768) {
-    min-width: 226px;
-    height: 274px;
+    min-width: 58%;
+    margin-right: 8.1%;
+    height: min-content;
   }
 }
 
 .slider__image-container {
-  height: 294px;
+  height: auto;
   grid-row: 1/-1;
   grid-column: 1/-1;
 
+  @media (max-width: $vp-1200) {
+    height: 294px;
+    overflow: hidden;
+  }
+
+  @media (min-width: 770px) and (max-width: $vp-1200) {
+    height: auto;
+    overflow: visible;
+  }
+
   @media (max-width: $vp-768) {
-    height: 274px;
+    height: min-content;
   }
 }
+
 
 .slider__image-container img {
   display: block;
@@ -136,14 +174,13 @@
   height: auto;
 
   @media (max-width: $vp-1200) {
-    width: 268px;
-    height: 294px;
+    width: 100%;
+    height: auto;
+    object-fit: cover;
   }
 
   @media (max-width: $vp-768) {
-    width: 226px;
-    height: 274px;
-    object-fit: cover;
+    min-height: 274px;
   }
 }
 
@@ -200,6 +237,7 @@
   font-weight: 400;
   line-height: 21px;
   text-align: left;
+  position: static;
 }
 
 .slider__list-awards li {

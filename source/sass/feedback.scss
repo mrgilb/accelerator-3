@@ -35,6 +35,7 @@
 
   @media (max-width: $vp-768) {
     max-width: 100%;
+    width: 100%;
     padding: 0 15px;
   }
 }
@@ -73,13 +74,13 @@
   }
 
   @media (max-width: $vp-768) {
-      width: 100%;
-      margin-top: 43px;
+    width: 100%;
+    margin-top: 43px;
 
-      &:nth-child(3n) {
-        margin-top: 33px;
-        margin-bottom: 39px;
-      }
+    &:nth-child(3n) {
+      margin-top: 33px;
+      margin-bottom: 39px;
+    }
   }
 }
 
@@ -159,5 +160,10 @@
 
   @media (max-width: $vp-768) {
     width: 100%;
+  }
+
+  &:disabled {
+    opacity: 0.3;
+    cursor: not-allowed;
   }
 }

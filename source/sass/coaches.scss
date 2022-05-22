@@ -2,11 +2,11 @@
   padding: 115px 0 100px;
 
   @media (max-width: $vp-1200) {
-    padding: 95px 45px 80px;
+    padding: 95px 45px 69px;
   }
 
   @media (max-width: $vp-768) {
-    padding: 67px 15px 50px;
+    padding: 67px 15px 69px;
   }
 }
 
@@ -26,7 +26,7 @@
     font-size: 42px;
     line-height: 42px;
     letter-spacing: 0.03em;
-    text-align: center ;
+    text-align: center;
   }
 
   @media (max-width: $vp-768) {

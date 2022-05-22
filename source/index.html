@@ -75,38 +75,50 @@
         </div>
         <div class="about__iamge-container">
           <picture>
+            <source type="image/webp"
+              srcset="./img/about-bg-desktop.webp 1x, ./img/about-bg-desktop@2x.webp 2x">
             <img src="./img/about-bg-desktop.png" width="660" height="401" srcset="./img/about-bg-desktop@2x.png 2x" alt="Изображение тренажерного зала">
           </picture>
         </div>
-        <div class="preview about__video">
-          <img src="./img/preview-desktop.png" width="364" height="228" alt="">
+        <div class="preview">
+          <iframe class="preview__video preview__video--no-js" width="560" height="315" src="https://www.youtube.com/embed/9TZXsZItgdw?controls=1" title="YouTube video player" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+          <div class="preview__image-container preview__image-container--no-js">
+            <picture>
+              <source type="image/webp"
+                srcset="./img/preview-desktop.webp 1x, ./img/preview-desktop@2x.webp 2x">
+              <img src="./img/preview-desktop.png" srcset="./img/preview-desktop@2x.png" width="364" height="228" alt="">
+            </picture>
+          </div>
+          <button class="preview__play preview__play--no-js">
+            <span class="visually-hidden">Запустить видео</span>
+          </button>
         </div>
       </div>
     </section>
     <section class="offers">
       <h2>Абонементы</h2>
       <div class="tabs">
-        <div class="tabs__controls">
+        <div class="tabs__controls tabs__controls--no-js">
           <ul>
             <li>
-              <button class="tabs__button tabs__button--active">
+              <button class="tabs__button one-month tabs__button--active">
                 1 месяц
               </button>
             </li>
             <li>
-              <button class="tabs__button">
+              <button class="tabs__button six-months">
                 6 месяцев
               </button>
             </li>
             <li>
-              <button class="tabs__button">
+              <button class="tabs__button twelve-months">
                 12 месяцев
               </button>
             </li>
           </ul>
         </div>
         <div class="tabs__content">
-          <ul>
+          <ul id="one-month" class="tabs__list tabs__list--no-js">
             <li class="tabs__content-item" tabindex="0">
               <h3>С тренером</h3>
               <span>12 занятий</span>
@@ -126,6 +138,46 @@
               <a href="#">купить абонемент</a>
             </li>
           </ul>
+          <ul id="six-months" class="tabs__list tabs__list--display-none tabs__list--no-js">
+            <li class="tabs__content-item" tabindex="0">
+              <h3>С тренером</h3>
+              <span>12 занятий</span>
+              <p data-parrent="9000">9000 <span class="tabs__ruble">₽</span></p>
+              <a href="#">купить абонемент</a>
+            </li>
+            <li class="tabs__content-item" tabindex="0">
+              <h3>Дневной</h3>
+              <span>с 8:00 до 17:00</span>
+              <p data-parrent="6800">6800 <span class="tabs__ruble">₽</span></p>
+              <a href="#">купить абонемент</a>
+            </li>
+            <li class="tabs__content-item" tabindex="0">
+              <h3>Полный день</h3>
+              <span>с 8:00 до 22:00 </span>
+              <p data-parrent="10800">10800 <span class="tabs__ruble">₽</span></p>
+              <a href="#">купить абонемент</a>
+            </li>
+          </ul>
+          <ul id="twelve-months" class="tabs__list tabs__list--display-none tabs__list--no-js">
+            <li class="tabs__content-item" tabindex="0">
+              <h3>С тренером</h3>
+              <span>12 занятий</span>
+              <p data-parrent="40000">40000 <span class="tabs__ruble">₽</span></p>
+              <a href="#">купить абонемент</a>
+            </li>
+            <li class="tabs__content-item" tabindex="0">
+              <h3>Дневной</h3>
+              <span>с 8:00 до 17:00</span>
+              <p data-parrent="18000">18000 <span class="tabs__ruble">₽</span></p>
+              <a href="#">купить абонемент</a>
+            </li>
+            <li class="tabs__content-item" tabindex="0">
+              <h3>Полный день</h3>
+              <span>с 8:00 до 22:00 </span>
+              <p data-parrent="15000">15000 <span class="tabs__ruble">₽</span></p>
+              <a href="#">купить абонемент</a>
+            </li>
+          </ul>
         </div>
       </div>
     </section>
@@ -134,21 +186,23 @@
         <h1 class="article__title">SUPER <span>GAMES</span></h1>
         <ul class="article__list">
           <li class="article__item">
-            <p>
-              Дата
-            </p>
-            <p>
-              <span>7</span>
-              <span class="article__mounth">
-                Марта
-                <br>
-                2019
-              </span>
-            </p>
+            <dl>
+              <dt>Дата</dt>
+              <dd>
+                <span>7</span>
+                <span class="article__mounth">
+                  Марта
+                  <br>
+                  2019
+                </span>
+              </dd>
+            </dl>
           </li>
           <li class="article__item">
-            <p>Время</p>
-            <span class="article__time">12:00</span>
+            <dl>
+              <dt>Время</dt>
+              <dd>12:00</dd>
+            </dl>
           </li>
         </ul>
         <p>Ежегодные соревнования по CrossFit</p>
@@ -162,15 +216,19 @@
           <button class="controls slider__back">
             <span class="visually-hidden">назад</span>
           </button>
-          <button class="controls">
+          <button class="controls slider__next">
             <span class="visually-hidden">далее</span>
           </button>
         </div>
         <div class="slider__slides">
-          <ul>
+          <ul class="slider__list">
             <li class="slider__item">
               <div class="slider__image-container">
-                <img src="./img/content/anna.png" width="260" height="294" alt="Фото тренера">
+                <picture>
+                  <source type="image/webp"
+              srcset="./img/content/anna.webp 1x, ./img/content/anna@2x.webp 2x">
+                  <img src="./img/content/anna.png" srcset="./img/content/anna@2x.png 2x" width="260" height="294" alt="Фото тренера">
+                </picture>
               </div>
               <div class="slider__card-container">
                 <h3>Анна Павлова</h3>
@@ -184,7 +242,11 @@
             </li>
             <li class="slider__item">
               <div class="slider__image-container">
-                <img src="./img/content/alexei.png" width="260" height="294" alt="Фото тренера">
+                <picture>
+                  <source type="image/webp"
+                  srcset="./img/content/alexei.webp 1x, ./img/content/alexei@2x.webp 2x">
+                  <img src="./img/content/alexei.png" srcset="./img/content/alexei@2x.png 2x" width="260" height="294" alt="Фото тренера">
+                </picture>
               </div>
               <div class="slider__card-container">
                 <h3>Алексей Лавров</h3>
@@ -198,7 +260,11 @@
             </li>
             <li class="slider__item">
               <div class="slider__image-container">
-                <img src="./img/content/alexander.png" width="260" height="294" alt="Фото тренера">
+                <picture>
+                  <source type="image/webp"
+                  srcset="./img/content/alexander.webp 1x, ./img/content/alexander@2x.webp 2x">
+                  <img src="./img/content/alexander.png" srcset="./img/content/alexander@2x.png 2x" width="260" height="294" alt="Фото тренера">
+                </picture>
               </div>
               <div class="slider__card-container">
                 <h3>Александр Пашков</h3>
@@ -212,7 +278,11 @@
             </li>
             <li class="slider__item">
               <div class="slider__image-container">
-                <img src="./img/content/maria.png" width="260" height="294" alt="Фото тренера">
+                <picture>
+                  <source type="image/webp"
+                  srcset="./img/content/maria.webp 1x, ./img/content/maria@2x.webp 2x">
+                  <img src="./img/content/maria.png" srcset="./img/content/maria@2x.png 2x" width="260" height="294" alt="Фото тренера">
+                </picture>
               </div>
               <div class="slider__card-container">
                 <h3>Мария Кетова</h3>
@@ -226,7 +296,11 @@
             </li>
             <li class="slider__item">
               <div class="slider__image-container">
-                <img src="./img/content/anna.png" width="260" height="294" alt="Фото тренера">
+                <picture>
+                  <source type="image/webp"
+                  srcset="./img/content/anna.webp 1x, ./img/content/anna@2x.webp 2x">
+                  <img src="./img/content/anna.png" srcset="./img/content/anna@2x.png 2x" width="260" height="294" alt="Фото тренера">
+                </picture>
               </div>
               <div class="slider__card-container">
                 <h3>Анна Павлова</h3>
@@ -240,7 +314,11 @@
             </li>
             <li class="slider__item">
               <div class="slider__image-container">
-                <img src="./img/content/alexei.png" width="260" height="294" alt="Фото тренера">
+                <picture>
+                  <source type="image/webp"
+                  srcset="./img/content/alexei.webp 1x, ./img/content/alexei@2x.webp 2x">
+                  <img src="./img/content/alexei.png" srcset="./img/content/alexei@2x.png 2x" width="260" height="294" alt="Фото тренера">
+                </picture>
               </div>
               <div class="slider__card-container">
                 <h3>Алексей Лавров</h3>
@@ -254,7 +332,11 @@
             </li>
             <li class="slider__item">
               <div class="slider__image-container">
-                <img src="./img/content/alexander.png" width="260" height="294" alt="Фото тренера">
+                <picture>
+                  <source type="image/webp"
+                  srcset="./img/content/alexander.webp 1x, ./img/content/alexander@2x.webp 2x">
+                  <img src="./img/content/alexander.png" srcset="./img/content/alexander@2x.png 2x" width="260" height="294" alt="Фото тренера">
+                </picture>
               </div>
               <div class="slider__card-container">
                 <h3>Александр Пашков</h3>
@@ -268,7 +350,11 @@
             </li>
             <li class="slider__item">
               <div class="slider__image-container">
-                <img src="./img/content/maria.png" width="260" height="294" alt="Фото тренера">
+                <picture>
+                  <source type="image/webp"
+                  srcset="./img/content/maria.webp 1x, ./img/content/maria@2x.webp 2x">
+                  <img src="./img/content/maria.png" srcset="./img/content/maria@2x.png 2x" width="260" height="294" alt="Фото тренера">
+                </picture>
               </div>
               <div class="slider__card-container">
                 <h3>Мария Кетова</h3>
@@ -288,14 +374,10 @@
       <h2>Наши преимущества</h2>
       <ul>
         <li class="advantages__item">
-          <div>
-            <p>
-              900
-            </p>
-            <span>
-              кв/м
-            </span>
-          </div>
+          <dl>
+            <dt>900</dt>
+            <dd>кв/м</dd>
+          </dl>
           <div>
             <h4>
               Площадь
@@ -307,14 +389,10 @@
 
         </li>
         <li class="advantages__item">
-          <div>
-            <p>
-              70
-            </p>
-            <span>
-              машин
-            </span>
-          </div>
+          <dl>
+            <dt>70</dt>
+            <dd>машин</dd>
+          </dl>
           <div>
             <h4>
               Собственная парковка
@@ -325,26 +403,19 @@
           </div>
         </li>
         <li class="advantages__item advantages__item--third">
-          <h4>
-            100 <br>
-          </h4>
-          <span>
-            Тренажеров
-          </span>
+          <dl>
+            <dt>100</dt>
+            <dd>Тренажеров</dd>
+          </dl>
           <p>
             Современные тренажеры на все группы мышц
           </p>
         </li>
-        <li
-          class="advantages__item advantages__item--fourth advantages__item--border-top advantages__item--border-top-to-left">
-          <div>
-            <p>
-              350
-            </p>
-            <span>
-              мест
-            </span>
-          </div>
+        <li class="advantages__item advantages__item--fourth advantages__item--border-top advantages__item--border-top-to-left">
+          <dl>
+            <dt>350</dt>
+            <dd>мест</dd>
+          </dl>
           <div>
             <h4>
               Комфорт
@@ -355,14 +426,10 @@
           </div>
         </li>
         <li class="advantages__item advantages__item--fifth advantages__item--border-top">
-          <div>
-            <p>
-              5+
-            </p>
-            <span>
-              лет
-            </span>
-          </div>
+          <dl>
+            <dt>5+</dt>
+            <dd>лет</dd>
+          </dl>
           <div>
             <h4>
               Тренерский опыт
@@ -406,47 +473,58 @@
     <section class="comments">
       <h2>Отзывы</h2>
       <div class="accordion">
-        <ul class="accordion__list">
-          <li>
-            <div class="accordion__image-container">
-              <img src="./img/content/avatar.png" width="80" height="80" alt="avatar">
-              <h3>Анна Орлова</h3>
-            </div>
-            <div>
-              <p>
-                &laquo;Хожу в&nbsp;SuperClub уже больше года. Нравится, что в&nbsp;клубе всегда чисто, тренажеры
-                обновляют, персонал дружелюбный.
-                Зал просторный, даже в&nbsp;вечернее время нет очередей&raquo;
-              </p>
-            </div>
-          </li>
-          <li>
-            <div class="accordion__image-container">
-              <img src="./img/content/avatar.png" width="80" height="80" alt="avatar">
-              <h3>Lorem Ipsum</h3>
-            </div>
-            <div>
-              <p>
-                Lorem Ipsum&nbsp;&mdash; это текст-&laquo;рыба&raquo;, часто используемый в&nbsp;печати
-                и&nbsp;вэб-дизайне.
-                Lorem Ipsum является стандартной &laquo;рыбой&raquo; для текстов на&nbsp;латинице с&nbsp;начала
-                XVI&nbsp;века.
-                В&nbsp;то&nbsp;время некий безымянный печатник создал большую коллекцию размеров и&nbsp;форм шрифтов,
-                используя Lorem Ipsum для распечатки образцов. Lorem Ipsum не&nbsp;только успешно пережил без заметных
-                изменений пять веков,
-                но&nbsp;и&nbsp;перешагнул в&nbsp;электронный дизайн.
-                Его популяризации в&nbsp;новое время послужили публикация листов Letraset с&nbsp;образцами
-                Lorem Ipsum в&nbsp;60-х годах&nbsp;и, в&nbsp;более недавнее время, программы электронной вёрстки типа
-                Aldus PageMaker, в&nbsp;шаблонах которых используется Lorem Ipsum.
-              </p>
-            </div>
-          </li>
-        </ul>
+        <div class="accordion__wrapper">
+          <ul class="accordion__list">
+            <li class="accordion__item">
+              <div class="accordion__image-container">
+                <picture>
+                  <source type="image/webp"
+                  srcset="./img/content/avatar.webp 1x, ./img/content/avatar@2x.webp 2x">
+                  <img src="./img/content/avatar.png" width="80" height="80" alt="avatar">
+                </picture>
+                <h3>Анна Орлова</h3>
+              </div>
+              <div>
+                <p>
+                  &laquo;Хожу в&nbsp;SuperClub уже больше года. Нравится, что в&nbsp;клубе всегда чисто, тренажеры
+                  обновляют, персонал дружелюбный.
+                  Зал просторный, даже в&nbsp;вечернее время нет очередей&raquo;
+                </p>
+              </div>
+            </li>
+            <li class="accordion__item">
+              <div class="accordion__image-container">
+                <picture>
+                  <source type="image/webp"
+                  srcset="./img/content/avatar.webp 1x, ./img/content/avatar@2x.webp 2x">
+                  <img src="./img/content/avatar.png" width="80" height="80" alt="avatar">
+                </picture>
+                <h3>Lorem Ipsum</h3>
+              </div>
+              <div>
+                <p>
+                  Lorem Ipsum&nbsp;&mdash; это текст-&laquo;рыба&raquo;, часто используемый в&nbsp;печати
+                  и&nbsp;вэб-дизайне.
+                  Lorem Ipsum является стандартной &laquo;рыбой&raquo; для текстов на&nbsp;латинице с&nbsp;начала
+                  XVI&nbsp;века.
+                  В&nbsp;то&nbsp;время некий безымянный печатник создал большую коллекцию размеров и&nbsp;форм шрифтов,
+                  используя Lorem Ipsum для распечатки образцов. Lorem Ipsum не&nbsp;только успешно пережил без заметных
+                  изменений пять веков,
+                  но&nbsp;и&nbsp;перешагнул в&nbsp;электронный дизайн.
+                  Его популяризации в&nbsp;новое время послужили публикация листов Letraset с&nbsp;образцами
+                  Lorem Ipsum в&nbsp;60-х годах&nbsp;и, в&nbsp;более недавнее время, программы электронной вёрстки типа
+                  Aldus PageMaker, в&nbsp;шаблонах которых используется Lorem Ipsum.
+                </p>
+              </div>
+            </li>
+
+          </ul>
+        </div>
         <div class="accordion__controls">
           <button class="controls accordion__back">
             <span class="visually-hidden">назад</span>
           </button>
-          <button class="controls">
+          <button class="controls accordion__next">
             <span class="visually-hidden">далее</span>
           </button>
         </div>
@@ -457,12 +535,12 @@
         <form action="#">
           <h2>бесплатное занятие</h2>
           <label>
-            <input type="text" placeholder="Имя">
+            <input type="text" placeholder="Имя" required>
           </label>
           <label>
-            <input type="tel" placeholder="Телефон">
+            <input type="tel" class="tel" placeholder="Телефон" id="phone" minlength="14" maxlength="14" required>
           </label>
-          <button>отправить</button>
+          <button class="feedback__button submit">отправить</button>
         </form>
       </div>
       <div class="address">

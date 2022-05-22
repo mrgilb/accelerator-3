@@ -149,7 +149,7 @@
     text-align: right;
   }
 
-  &:first-letter {
+  &::first-letter {
     position: absolute;
   }
 }

@@ -6,6 +6,11 @@
   background-color: transparent;
   cursor: pointer;
 
+  &:disabled {
+    opacity: 0.5;
+    cursor: not-allowed;
+  }
+
   &:first-child::after {
     transform: rotate(180deg);
   }

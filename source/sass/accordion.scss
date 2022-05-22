@@ -3,9 +3,32 @@
   margin: 0 auto;
   overflow: hidden;
   position: relative;
+  padding-bottom: 40px;
+
+  @media (max-width: $vp-1200) {
+    max-width: 100%;
+  }
 
   @media (max-width: $vp-768) {
-    width: 290px;
+    max-width: 100%;
+  }
+}
+
+.accordion__wrapper {
+  width: 83.5%;
+  min-height: 245px;
+  overflow-x: hidden;
+  margin: 55px auto 0;
+  box-shadow: 0 0 40px rgba(28, 51, 116, 0.2);
+  position: relative;
+
+  @media (max-width: $vp-1200) {
+    margin-top: 45px;
+  }
+
+  @media (max-width: $vp-768) {
+    width: 79%;
+    min-height: 337px;
   }
 }
 
@@ -34,45 +57,48 @@
 }
 
 .accordion__list {
+  margin: 0;
   padding: 0;
-  margin: 55px 16px 0;
   width: max-content;
   list-style: none;
   display: flex;
+  position: absolute;
+  left: 0;
+  transition: $allease;
 
   @media (max-width: $vp-1200) {
-    margin-top: 45px;
-    margin-left: 14px;
+    width: 214%;
   }
 
   @media (max-width: $vp-768) {
-    margin-left: 0;
+    width: 225%;
   }
 }
 
 .accordion__list li {
   align-self: flex-start;
-  margin: 0 40px;
+  margin: 0;
+  margin-right: 40px;
   padding: 62px;
   padding-bottom: 58px;
   box-sizing: border-box;
   width: 560px;
   background-color: #1c3374;
-  box-shadow: 0 0 40px rgba(28, 51, 116, 0.2);
   display: flex;
+  position: relative;
 
   @media (max-width: $vp-1200) {
-    width: 566px;
+    width: 50%;
+    min-height: 245px;
     padding-bottom: 57px;
   }
 
   @media (max-width: $vp-768) {
-    padding: 40px 25px;
-    padding-bottom: 35px;
+    padding: 40px 25px 35px;
     align-items: center;
-    width: 226px;
+    width: 45%;
     min-height: 335px;
-    margin: 0 32px;
+    margin-right: 32px;
     flex-direction: column;
   }
 }
@@ -83,7 +109,7 @@
   @media (max-width: $vp-768) {
     margin-right: 0;
     display: flex;
-    align-items: center
+    align-items: center;
   }
 }
 
@@ -104,9 +130,16 @@
   text-align: left;
   color: #ffffff;
   margin: 0;
+  position: absolute;
+  top: 0;
+  left: 0;
+  margin-left: 170px;
+  margin-top: 59px;
 
   @media (max-width: $vp-768) {
+    position: static;
     line-height: 26px;
+    margin: 0;
   }
 }
 
@@ -119,10 +152,12 @@
   color: #ffffff;
   max-height: 90px;
   margin-bottom: 0;
+  margin-top: 35px;
   overflow-y: auto;
 
   @media (max-width: $vp-768) {
     text-align: center;
     max-height: 178px;
+    margin-top: 12px;
   }
 }
