@@ -830,7 +830,7 @@ html {
   margin-bottom: 0;
 }
 
-.about__text p:nth-child(2n + 1) {
+.about__text p:nth-child(2n) {
   margin-top: 10px;
 }
 
@@ -2722,6 +2722,7 @@ html {
     width: auto;
     height: auto;
     min-width: 399px;
+    min-height: 462px;
     margin-right: 0;
     -webkit-box-flex: 1;
     -ms-flex-positive: 1;
@@ -2938,7 +2939,7 @@ html {
     max-width: 85%;
   }
 
-  .about__text p:nth-child(2n + 1) {
+  .about__text p:nth-child(2n) {
     display: none;
   }
 

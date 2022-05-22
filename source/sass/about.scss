@@ -110,7 +110,7 @@
     padding: 0 15px;
   }
 
-  &:nth-child(2n + 1) {
+  &:nth-child(2n) {
     margin-top: 10px;
 
     @media (max-width: $vp-1200) {
