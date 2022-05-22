@@ -98,7 +98,7 @@
   font-weight: 400;
   line-height: 16px;
   text-align: left;
-  color: #ffffff;
+  color: #87ceeb;
 
   &::placeholder {
     font-family: $roboto400;
@@ -107,6 +107,22 @@
     line-height: 16px;
     text-align: left;
     color: #ffffff;
+  }
+
+  &:hover {
+    color: #87ceeb;
+
+    &::placeholder {
+      color: #87ceeb;
+    }
+  }
+
+  &:focus {
+    color: #87ceeb;
+
+    &::placeholder {
+      color: #87ceeb;
+    }
   }
 
   @media (max-width: $vp-1200) {

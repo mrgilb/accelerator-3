@@ -1,11 +1,19 @@
-if (document.querySelector('.accordion') && document.querySelector('.accordion__list') && document.querySelector('.accordion__item') && document.querySelector('.accordion__next') && document.querySelector('.accordion__back')) {
+if (document.querySelector('.accordion') && document.querySelector('.accordion__list') && document.querySelector('.accordion__item') && document.querySelector('.accordion__next') && document.querySelector('.accordion__back') && document.querySelector('.accordion__wrapper') && document.querySelector('.accordion__controls ')) {
   const carousel = document.querySelector('.accordion');
   const items = document.querySelector('.accordion__list');
   const item = document.querySelector('.accordion__item');
   const nextButton = document.querySelector('.accordion__next');
   const prevButton = document.querySelector('.accordion__back');
+  const accordionWrapper = document.querySelector('.accordion__wrapper');
+  const accordionControls = document.querySelector('.accordion__controls ');
+
   const allSlidesCount = document.querySelectorAll('.accordion__item').length;
   const visibleSlides = 1;
+
+  accordionWrapper.classList.remove('accordion__wrapper--no-js');
+  items.classList.remove('accordion__list--no-js');
+  accordionControls.classList.remove('accordion__controls--no-js');
+
   let offsetSlide = parseInt(window.getComputedStyle(items, null).getPropertyValue('left'), 10);
   if (offsetSlide <= 0) {
     prevButton.setAttribute('disabled', 'disabled');

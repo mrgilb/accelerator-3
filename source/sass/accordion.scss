@@ -32,6 +32,11 @@
   }
 }
 
+.accordion__wrapper--no-js {
+  box-shadow: none;
+  padding: 50px;
+}
+
 .accordion__controls {
   position: absolute;
   width: 100%;
@@ -56,6 +61,10 @@
   }
 }
 
+.accordion__controls--no-js {
+  display: none;
+}
+
 .accordion__list {
   margin: 0;
   padding: 0;
@@ -73,6 +82,18 @@
   @media (max-width: $vp-768) {
     width: 225%;
   }
+}
+
+.accordion__list--no-js {
+  flex-wrap: wrap;
+  position: static;
+  width: 100%;
+}
+
+.accordion__list--no-js .accordion__item {
+  margin-right: 0;
+  margin-bottom: 20px;
+  box-shadow: 0 0 40px rgba(28, 51, 116, 0.2);
 }
 
 .accordion__list li {

@@ -165,8 +165,12 @@
   transition: $allease;
   user-select: none;
 
-  &::after {
-    text-decoration: overline;
+  &:hover {
+    text-decoration: underline;
+  }
+
+  &:focus {
+    text-decoration: underline;
   }
 
   @media (max-width: $vp-1200) {

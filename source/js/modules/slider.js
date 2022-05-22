@@ -1,7 +1,13 @@
-if (document.querySelector('.slider__controls') && document.querySelector('.slider__list') && document.querySelector('.slider__item') && document.querySelector('.slider')) {
+if (document.querySelector('.slider__controls') && document.querySelector('.slider__list') && document.querySelector('.slider__item') && document.querySelector('.slider') && document.querySelector('.slider__slides')) {
   const slider = document.querySelector('.slider');
   const listSlider = document.querySelector('.slider__list');
   const allSlides = document.querySelectorAll('.slider__item');
+  const sliderContainer = document.querySelector('.slider__slides');
+  const sliderControls = document.querySelector('.slider__controls');
+
+  listSlider.classList.remove('slider__list--no-js');
+  sliderContainer.classList.remove('slider__slides--no-js');
+  sliderControls.classList.remove('slider__controls--no-js');
 
 
   let touchPositionStart = null;

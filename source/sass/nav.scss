@@ -32,7 +32,6 @@
 
   &:focus {
     text-shadow: 5px 5px 5px #333333;
-    outline: none;
   }
 
   @media (max-width: $vp-1200) {
@@ -54,6 +53,7 @@
   justify-content: flex-start;
   max-width: 794px;
   box-sizing: border-box;
+  margin-bottom: -20px;
 
   @media (max-width: $vp-1200) {
     max-width: 535px;
@@ -70,6 +70,7 @@
 
 .nav--footer li {
   margin-right: 36px;
+  margin-bottom: 10px;
 
   &:first-child {
     margin-right: auto;
