@@ -19,10 +19,10 @@
       width: 309px;
       height: 443px;
       margin-bottom: -124px;
-      background-image: url("../img/offers-bg-tablet.png");
+      background-image: url("../img/offers-bg-tablet.webp");
 
       @media (min-resolution: $retina-dppx) {
-        background-image: url("../img/offers-bg-tablet@2x.png");
+        background-image: url("../img/offers-bg-tablet@2x.webp");
       }
     }
 
@@ -30,10 +30,10 @@
       width: 286px;
       height: 384px;
       margin-bottom: -96px;
-      background-image: url("../img/offers-bg-desktop.png");
+      background-image: url("../img/offers-bg-desktop.webp");
 
       @media (min-resolution: $retina-dppx) {
-        background-image: url("../img/offers-bg-desktop@2x.png");
+        background-image: url("../img/offers-bg-desktop@2x.webp");
       }
     }
 

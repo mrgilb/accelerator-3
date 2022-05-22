@@ -182,6 +182,7 @@
   position: relative;
   align-self: flex-start;
   transition: $allease;
+  user-select: none;
 
   &:hover {
     color: #102654;
@@ -325,6 +326,7 @@
   margin-top: auto;
   position: relative;
   align-self: flex-start;
+  user-select: none;
 
 
   &::after {

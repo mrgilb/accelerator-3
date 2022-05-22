@@ -20,18 +20,18 @@
 
     @media (min-width: 768px) {
       display: block;
-      background-image: url("../img/promo-bg-tablet.png");
+      background-image: url("../img/promo-bg-tablet.webp");
 
       @media (min-resolution: $retina-dppx) {
-        background-image: url("../img/promo-bg-tablet@2x.png");
+        background-image: url("../img/promo-bg-tablet@2x.webp");
       }
     }
 
     @media (min-width: 1200px) {
-      background-image: url("../img/promo-bg-desktop.png");
+      background-image: url("../img/promo-bg-desktop.webp");
 
       @media (min-resolution: $retina-dppx) {
-        background-image: url("../img/promo-bg-desktop@2x.png");
+        background-image: url("../img/promo-bg-desktop@2x.webp");
       }
     }
 
@@ -208,6 +208,7 @@
   align-self: flex-start;
   justify-self: flex-end;
   margin-top: 64px;
+  user-select: none;
 
   &:hover {
     text-shadow: 5px 5px 5px #333333;

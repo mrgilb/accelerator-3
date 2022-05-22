@@ -163,6 +163,7 @@
   text-decoration: none;
   margin-left: 2px;
   transition: $allease;
+  user-select: none;
 
   &::after {
     text-decoration: overline;
