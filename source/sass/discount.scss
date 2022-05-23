@@ -73,6 +73,7 @@
       margin-right: 0;
       flex-grow: 1;
       background-position: top;
+      align-self: stretch;
 
       @media (min-resolution: $retina-dppx) {
         background-image: url("../img/discount-bg-tablet@2x.webp");
@@ -85,6 +86,7 @@
       margin-right: 40px;
       background-image: url("../img/discount-bg-desktop.webp");
       flex-grow: 0;
+      align-self: flex-start;
 
       @media (min-resolution: $retina-dppx) {
         background-image: url("../img/discount-bg-desktop@2x.webp");
