@@ -1831,8 +1831,6 @@ html {
   -ms-flex-order: -1;
   order: -1;
   background-color: #87ceeb;
-  -ms-flex-item-align: start;
-  align-self: flex-start;
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
