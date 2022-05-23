@@ -3227,7 +3227,7 @@ html {
   }
 
   .discount {
-    padding: 75px 45px;
+    padding: 75px 45px 45px;
   }
 
   .discount h2 {
@@ -3250,6 +3250,10 @@ html {
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: row;
+    flex-direction: row;
     -webkit-box-flex: 2;
     -ms-flex-positive: 2;
     flex-grow: 2;
@@ -3257,15 +3261,17 @@ html {
 
   .discount__list li {
     min-width: 324px;
-    margin-bottom: 0;
+    margin-bottom: 30px;
     margin-right: 30px;
-    -webkit-box-flex: 1;
-    -ms-flex-positive: 1;
-    flex-grow: 1;
+    width: 47%;
   }
 
   .discount__list li:nth-child(2n) {
     margin-right: 0;
+  }
+
+  .discount__list li:last-child {
+    margin-bottom: 30px;
   }
 
   .discount__br-tablet {
