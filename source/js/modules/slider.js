@@ -86,6 +86,7 @@ if (document.querySelector('.slider__controls') && document.querySelector('.slid
 
   slider.addEventListener('click', moveSlides);
   slider.addEventListener('touchstart', (evt) => {
+    evt.preventDefault();
     touchPositionStartX = evt.touches[0].clientX;
     touchPositionStartY = evt.touches[0].clientY;
   });
