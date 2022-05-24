@@ -3,6 +3,10 @@
   margin: 35px auto 0;
   position: relative;
 
+  @media (max-width: 1300px) {
+    width: 90%;
+  }
+
   @media (max-width: $vp-1200) {
     margin-top: 25px;
     width: 94%;
@@ -51,7 +55,7 @@
   width: calc(100% - 40px);
   padding: 20px;
   max-width: 1160px;
-  min-height: 294px;
+  min-height: 297px;
   margin: 0 auto;
   overflow-x: hidden;
   position: relative;
@@ -77,6 +81,7 @@
 
 .slider__slides ul {
   margin: 0;
+  width: 200%;
   margin-left: 1.7%;
   margin-top: 20px;
   padding: 0;
@@ -101,8 +106,9 @@
 
 .slider__slides .slider__item {
   display: grid;
-  width: 22.4%;
-  height: 294px;
+  width: 10.8%;
+  height: auto;
+  max-height: 295px;
   margin-right: 40px;
   transition: $allease;
 
@@ -120,6 +126,7 @@
 
   &:focus .slider__card-container {
     background: rgba(16, 38, 84, 0.89);
+    padding-bottom: 0;
   }
 
   &:hover h3 {
@@ -146,12 +153,8 @@
     display: flex;
   }
 
-  @media (max-width: 1217px) {
-    margin-right: 24px;
-  }
-
-  @media (max-width: 1237px) {
-    margin-right: 30px;
+  @media (max-width: 1300px) {
+    max-height: 261px;
   }
 
   @media (max-width: $vp-1200) {
@@ -203,8 +206,9 @@
 
 .slider__image-container img {
   display: block;
-  width: 260px;
-  height: auto;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
 
   @media (max-width: $vp-1200) {
     width: 100%;
@@ -224,13 +228,15 @@
   grid-column: 1/-1;
   width: 100%;
   height: 100%;
-  padding: 52px 40px;
+  padding: 52px 10px;
+  align-items: center;
   padding-bottom: 22px;
   box-sizing: border-box;
   color: #ffffff;
   background: transparent;
   overflow: auto;
-  transition: $allease;
+  transition: background-color 500ms ease;
+  overflow-y: auto;
 
   @media (max-width: $vp-768) {
     padding: 43px 19px 22px;

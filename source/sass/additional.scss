@@ -1,13 +1,13 @@
 .additional {
   display: grid;
   grid-template-columns: 1fr 1fr;
-  margin-top: 58px;
+  margin-top: 60px;
   align-items: flex-start;
 
   @media (max-width: $vp-1200) {
     grid-template-columns: 1fr;
-    grid-template-rows: 1fr 1fr;
-    margin-top: 37px;
+    grid-template-rows: min-content min-content;
+    margin-top: 39px;
   }
 
   @media (max-width: $vp-768) {

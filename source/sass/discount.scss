@@ -43,65 +43,6 @@
   display: flex;
   flex-wrap: wrap;
 
-  &::after {
-    content: "";
-    width: 280px;
-    height: 462px;
-    position: static;
-    order: -1;
-    background-color: #87ceeb;
-
-
-    @media (min-width: 320px) {
-      margin-right: 0;
-      width: 100%;
-      height: 299px;
-      background-image: url("../img/discount-bg-mobile.webp");
-      background-position: top;
-
-      @media (min-resolution: $retina-dppx) {
-        background-image: url("../img/discount-bg-mobile@2x.webp");
-      }
-    }
-
-    @media (min-width: 768px) {
-      background-image: url("../img/discount-bg-tablet.webp");
-      width: auto;
-      height: auto;
-      min-width: 399px;
-      min-height: 462px;
-      margin-right: 0;
-      flex-grow: 1;
-      background-position: top;
-      align-self: stretch;
-
-      @media (min-resolution: $retina-dppx) {
-        background-image: url("../img/discount-bg-tablet@2x.webp");
-      }
-    }
-
-    @media (min-width: 1200px) {
-      min-width: 280px;
-      min-height: 462px;
-      margin-right: 40px;
-
-      @media (max-width: 1220px) {
-        margin-right: 20px;
-      }
-      background-image: url("../img/discount-bg-desktop.webp");
-      flex-grow: 0;
-      align-self: stretch;
-
-      @media (min-resolution: $retina-dppx) {
-        background-image: url("../img/discount-bg-desktop@2x.webp");
-      }
-    }
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: cover;
-    margin-right: 40px;
-  }
-
   @media (max-width: $vp-1200) {
     margin-top: 45px;
   }
@@ -115,21 +56,85 @@
   background-color: #ed0233;
   padding: 32px 45px;
   padding-bottom: 44px;
-  min-width: 280px;
+  min-width: 560px;
   min-height: 462px;
   box-sizing: border-box;
   order: -2;
   display: flex;
   flex-direction: column;
   align-self: flex-start;
+  position: relative;
+  margin-right: 40px;
+
+  &::after {
+    content: "";
+    width: 280px;
+    height: 100%;
+    position: absolute;
+    right: 0;
+    order: -1;
+    background-color: #87ceeb;
+
+
+    @media (min-width: 320px) {
+      margin-right: 0;
+      width: 100%;
+      height: 299px;
+      background-image: url("../img/discount-bg-mobile.webp");
+      background-position: top;
+      bottom: 0;
+
+      @media (min-resolution: $retina-dppx) {
+        background-image: url("../img/discount-bg-mobile@2x.webp");
+      }
+    }
+
+    @media (min-width: 768px) {
+      background-image: url("../img/discount-bg-tablet.webp");
+      width: auto;
+      height: 100%;
+      min-width: 58.8%;
+      top: 0;
+      margin-right: 0;
+      flex-grow: 1;
+      background-position: top;
+      align-self: stretch;
+
+      @media (min-resolution: $retina-dppx) {
+        background-image: url("../img/discount-bg-tablet@2x.webp");
+      }
+    }
+
+    @media (min-width: 1200px) {
+      min-width: 280px;
+      min-height: 462px;
+      height: 100%;
+      background-image: url("../img/discount-bg-desktop.webp");
+      flex-grow: 0;
+      align-self: stretch;
+
+      @media (min-resolution: $retina-dppx) {
+        background-image: url("../img/discount-bg-desktop@2x.webp");
+      }
+    }
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+  }
+
+  @media (max-width: 1300px) {
+    margin-right: 20px;
+  }
 
   @media (max-width: $vp-1200) {
     min-width: 279px;
+    width: 100%;
+    margin-right: 0;
   }
 
   @media (max-width: $vp-768) {
     width: 100%;
-    min-height: 299px;
+    padding-bottom: 343px;
     align-items: center;
   }
 }
@@ -310,6 +315,7 @@
 
 .discount__list p {
   font-family: $roboto400;
+  max-width: 450px;
   font-size: 16px;
   font-weight: 400;
   line-height: 22px;

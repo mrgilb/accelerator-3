@@ -1,7 +1,8 @@
 .preview {
   grid-column: 2/3;
   grid-row: 1/2;
-  align-self: flex-end;
+  align-self: flex-start;
+  margin-top: 286px;
   margin-left: 25px;
   display: grid;
   width: 364px;
@@ -13,6 +14,7 @@
     grid-column: 1/2;
     grid-row: 2/3;
     margin: 0 auto;
+    align-self: flex-end;
     width: 39.1%;
     min-height: 167px;
   }

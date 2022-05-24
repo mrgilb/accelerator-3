@@ -1,12 +1,15 @@
 .accordion {
   max-width: 672px;
   margin: 0 auto;
+  margin-top: 55px;
   overflow: hidden;
   position: relative;
   padding-bottom: 40px;
+  display: grid;
 
   @media (max-width: $vp-1200) {
     max-width: 100%;
+    margin-top: 45px;
   }
 
   @media (max-width: $vp-768) {
@@ -16,15 +19,13 @@
 
 .accordion__wrapper {
   width: 83.5%;
-  min-height: 245px;
   overflow-x: hidden;
-  margin: 55px auto 0;
-  box-shadow: 0 0 40px rgba(28, 51, 116, 0.2);
+  margin: 0 auto;
   position: relative;
-
-  @media (max-width: $vp-1200) {
-    margin-top: 45px;
-  }
+  box-shadow: 0px 0px 40px rgba(28, 51, 116, 0.2);
+  grid-row: 1/-1;
+  grid-column: 1/-1;
+  transition: $allease;
 
   @media (max-width: $vp-768) {
     width: 79%;
@@ -38,21 +39,12 @@
 }
 
 .accordion__controls {
-  position: absolute;
   width: 100%;
   display: flex;
   justify-content: space-between;
-  top: 0;
-  left: 0;
-  margin-top: 162px;
-
-  @media (max-width: $vp-1200) {
-    margin-top: 150px;
-  }
-
-  @media (max-width: $vp-768) {
-    margin-top: 203px;
-  }
+  grid-column: 1/-1;
+  grid-row: 1/-1;
+  align-self: center;
 }
 
 .accordion__back {
@@ -71,8 +63,8 @@
   width: max-content;
   list-style: none;
   display: flex;
-  position: absolute;
   left: 0;
+  top: 0;
   transition: $allease;
 
   @media (max-width: $vp-1200) {
@@ -90,7 +82,12 @@
   width: 100%;
 }
 
+.accordion__list .accordion__item--display-none {
+  display: none;
+}
+
 .accordion__list--no-js .accordion__item {
+  display: flex;
   margin-right: 0;
   margin-bottom: 20px;
   box-shadow: 0 0 40px rgba(28, 51, 116, 0.2);
@@ -107,11 +104,13 @@
   background-color: #1c3374;
   display: flex;
   position: relative;
+  transition: $allease;
 
   @media (max-width: $vp-1200) {
     width: 50%;
     min-height: 243px;
     padding-bottom: 57px;
+    padding-right: 71px;
   }
 
   @media (max-width: $vp-768) {
@@ -171,10 +170,8 @@
   line-height: 22px;
   text-align: left;
   color: #ffffff;
-  max-height: 90px;
   margin-bottom: 0;
   margin-top: 35px;
-  overflow-y: auto;
 
   @media (max-width: $vp-768) {
     text-align: center;
