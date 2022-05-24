@@ -19,7 +19,8 @@ if (document.querySelector('.accordion') && document.querySelector('.accordion__
     prevButton.setAttribute('disabled', 'disabled');
   }
 
-  let touchPositionStart = null;
+  let touchPositionStartX = null;
+  let touchPositionStartY = null;
 
   const moveItems = (evt) => {
     const stepOffset = parseInt(item.offsetWidth, 10) + parseInt(window.getComputedStyle(item).getPropertyValue('margin-right'), 10);
@@ -27,22 +28,26 @@ if (document.querySelector('.accordion') && document.querySelector('.accordion__
 
 
     if (evt.target.matches('.accordion__next') || evt.target.matches('.accordion__back') || evt.touches) {
-      let touchPositionEnd = null;
-      let diffPosition = null;
+      let touchPositionEndX = null;
+      let touchPositionEndY = null;
+      let diffPositionX = null;
 
       if (evt.touches) {
-        touchPositionEnd = evt.changedTouches[0].clientX;
-        diffPosition = touchPositionEnd - touchPositionStart;
+        touchPositionEndX = evt.changedTouches[0].clientX;
+        touchPositionEndY = evt.changedTouches[0].clientY;
+        if (Math.abs(touchPositionEndY - touchPositionStartY) < Math.abs(touchPositionEndX - touchPositionStartX)) {
+          diffPositionX = touchPositionEndX - touchPositionStartX;
+        }
       }
       if (offsetSlide > maxOffset) {
-        if (evt.target.matches('.accordion__next') || diffPosition < 0) {
+        if (evt.target.matches('.accordion__next') || diffPositionX < 0) {
           offsetSlide = offsetSlide - stepOffset;
           items.style.left = `${offsetSlide}px`;
         }
       }
 
       if (offsetSlide <= stepOffset * -1) {
-        if (evt.target.matches('.accordion__back') || diffPosition > 0) {
+        if (evt.target.matches('.accordion__back') || diffPositionX > 0) {
           offsetSlide = offsetSlide + stepOffset;
           items.style.left = `${offsetSlide}px`;
         }
@@ -67,7 +72,8 @@ if (document.querySelector('.accordion') && document.querySelector('.accordion__
   carousel.addEventListener('click', moveItems);
 
   carousel.addEventListener('touchstart', (evt) => {
-    touchPositionStart = evt.touches[0].clientX;
+    touchPositionStartX = evt.touches[0].clientX;
+    touchPositionStartY = evt.touches[0].clientY;
   });
 
   carousel.addEventListener('touchend', moveItems);

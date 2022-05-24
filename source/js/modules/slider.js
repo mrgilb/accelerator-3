@@ -10,7 +10,8 @@ if (document.querySelector('.slider__controls') && document.querySelector('.slid
   sliderControls.classList.remove('slider__controls--no-js');
 
 
-  let touchPositionStart = null;
+  let touchPositionStartX = null;
+  let touchPositionStartY = null;
 
   let renderSlides = [];
 
@@ -31,15 +32,19 @@ if (document.querySelector('.slider__controls') && document.querySelector('.slid
     evt.preventDefault();
 
     if (evt.target.matches('.slider__next') || evt.target.matches('.slider__back') || evt.touches) {
-      let touchPositionEnd = null;
-      let diffPosition = null;
+      let touchPositionEndX = null;
+      let touchPositionEndY = null;
+      let diffPositionX = null;
 
       if (evt.touches) {
-        touchPositionEnd = evt.changedTouches[0].clientX;
-        diffPosition = touchPositionEnd - touchPositionStart;
+        touchPositionEndX = evt.changedTouches[0].clientX;
+        touchPositionEndY = evt.changedTouches[0].clientY;
+        if (Math.abs(touchPositionEndY - touchPositionStartY) < Math.abs(touchPositionEndX - touchPositionStartX)) {
+          diffPositionX = touchPositionEndX - touchPositionStartX;
+        }
       }
 
-      if (evt.target.matches('.slider__next') || diffPosition < 0) {
+      if (evt.target.matches('.slider__next') || diffPositionX < 0) {
         for (let index = 0; index < renderSlides.length; index++) {
           if (index === 0) {
             listSlider.style = 'opacity: 0';
@@ -57,7 +62,7 @@ if (document.querySelector('.slider__controls') && document.querySelector('.slid
           }
         }
       }
-      if (evt.target.matches('.slider__back') || diffPosition > 0) {
+      if (evt.target.matches('.slider__back') || diffPositionX > 0) {
         for (let index = 0; index < renderSlides.length; index++) {
           if (index === renderSlides.length - 1) {
             listSlider.style = 'opacity: 0';
@@ -81,7 +86,8 @@ if (document.querySelector('.slider__controls') && document.querySelector('.slid
 
   slider.addEventListener('click', moveSlides);
   slider.addEventListener('touchstart', (evt) => {
-    touchPositionStart = evt.touches[0].clientX;
+    touchPositionStartX = evt.touches[0].clientX;
+    touchPositionStartY = evt.touches[0].clientY;
   });
 
   slider.addEventListener('touchend', moveSlides);
