@@ -1164,12 +1164,12 @@ html {
 .article::after {
   content: "";
   width: 660px;
-  min-height: 500px;
   position: static;
   right: 0;
   top: 0;
-  -ms-flex-item-align: start;
-  align-self: flex-start;
+  -ms-flex-item-align: stretch;
+  -ms-grid-row-align: stretch;
+  align-self: stretch;
   background-color: #102654;
   background-position: center;
   background-repeat: no-repeat;
@@ -2214,6 +2214,7 @@ html {
   box-sizing: border-box;
   background-color: #102654;
   min-height: 223px;
+  height: 100%;
   padding-bottom: 55px;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -2227,11 +2228,16 @@ html {
   margin-right: 25%;
   max-width: 410px;
   min-height: 224px;
+  height: -webkit-min-content;
+  height: -moz-min-content;
+  height: min-content;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
   -ms-flex-wrap: wrap;
   flex-wrap: wrap;
+  -ms-flex-item-align: center;
+  align-self: center;
 }
 
 .feedback h2 {
@@ -2765,7 +2771,7 @@ html {
   .article::after {
     background-image: url("../img/article-bg-desktop.webp");
     width: 660px;
-    height: 500px;
+    min-height: 500px;
   }
 
   .discount__wrapper::after {
@@ -2776,8 +2782,9 @@ html {
     -webkit-box-flex: 0;
     -ms-flex-positive: 0;
     flex-grow: 0;
-    -ms-flex-item-align: start;
-    align-self: flex-start;
+    -ms-flex-item-align: stretch;
+    -ms-grid-row-align: stretch;
+    align-self: stretch;
   }
 }
 
@@ -3346,11 +3353,14 @@ html {
     -webkit-box-pack: center;
     -ms-flex-pack: center;
     justify-content: center;
+    height: auto;
     padding-top: 64px;
     padding-bottom: 55px;
   }
 
   .feedback form {
+    -ms-flex-item-align: start;
+    align-self: flex-start;
     max-width: 65%;
     min-height: 205px;
     margin-right: 0;
@@ -3497,7 +3507,6 @@ html {
     padding-left: 15px;
     padding-right: 15px;
     padding-top: 18px;
-    padding-bottom: 3px;
   }
 
   .nav a {
@@ -4106,7 +4115,7 @@ html {
   }
 
   .address {
-    padding: 66px 15px 43px;
+    padding: 66px 15px 41px;
   }
 
   .address__wrapper {

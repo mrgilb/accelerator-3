@@ -3,12 +3,14 @@
   box-sizing: border-box;
   background-color: #102654;
   min-height: 223px;
+  height: 100%;
   padding-bottom: 55px;
   display: flex;
   justify-content: flex-end;
 
   @media (max-width: $vp-1200) {
     justify-content: center;
+    height: auto;
     padding-top: 64px;
     padding-bottom: 55px;
   }
@@ -23,10 +25,13 @@
   margin-right: 25%;
   max-width: 410px;
   min-height: 224px;
+  height: min-content;
   display: flex;
   flex-wrap: wrap;
+  align-self: center;
 
   @media (max-width: $vp-1200) {
+    align-self: flex-start;
     max-width: 65%;
     min-height: 205px;
     margin-right: 0;

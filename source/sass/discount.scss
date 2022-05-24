@@ -90,7 +90,7 @@
       }
       background-image: url("../img/discount-bg-desktop.webp");
       flex-grow: 0;
-      align-self: flex-start;
+      align-self: stretch;
 
       @media (min-resolution: $retina-dppx) {
         background-image: url("../img/discount-bg-desktop@2x.webp");

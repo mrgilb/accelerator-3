@@ -9,11 +9,10 @@
   &::after {
     content: "";
     width: 660px;
-    min-height: 500px;
     position: static;
     right: 0;
     top: 0;
-    align-self: flex-start;
+    align-self: stretch;
     background-color: #102654;
 
     @media (min-width: 320px) {
@@ -39,7 +38,7 @@
     @media (min-width: 1200px) {
       background-image: url("../img/article-bg-desktop.webp");
       width: 660px;
-      height: 500px;
+      min-height: 500px;
 
       @media (min-resolution: $retina-dppx) {
         background-image: url("../img/article-bg-desktop@2x.webp");
