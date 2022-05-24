@@ -29,7 +29,7 @@ if (document.querySelector('.slider__controls') && document.querySelector('.slid
 
 
   const moveSlides = (evt) => {
-    evt.preventDefault();
+
 
     if (evt.target.matches('.slider__next') || evt.target.matches('.slider__back') || evt.touches) {
       let touchPositionEndX = null;
@@ -86,7 +86,7 @@ if (document.querySelector('.slider__controls') && document.querySelector('.slid
 
   slider.addEventListener('click', moveSlides);
   slider.addEventListener('touchstart', (evt) => {
-    evt.preventDefault();
+
     touchPositionStartX = evt.touches[0].clientX;
     touchPositionStartY = evt.touches[0].clientY;
   });

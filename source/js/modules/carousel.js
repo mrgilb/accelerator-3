@@ -72,7 +72,6 @@ if (document.querySelector('.accordion') && document.querySelector('.accordion__
   carousel.addEventListener('click', moveItems);
 
   carousel.addEventListener('touchstart', (evt) => {
-    evt.preventDefault();
     touchPositionStartX = evt.touches[0].clientX;
     touchPositionStartY = evt.touches[0].clientY;
   });
