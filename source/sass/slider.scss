@@ -146,6 +146,14 @@
     display: flex;
   }
 
+  @media (max-width: 1217px) {
+    margin-right: 24px;
+  }
+
+  @media (max-width: 1237px) {
+    margin-right: 30px;
+  }
+
   @media (max-width: $vp-1200) {
     min-width: 30.2%;
     margin-right: 3.4%;

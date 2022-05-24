@@ -18,6 +18,10 @@
 }
 
 .address__wrapper {
+  @media (min-width: 1200px) and (max-width: 1365px) {
+    width: 95%;
+  }
+
   @media (max-width: $vp-1200) {
     margin: 0 auto;
     width: 74%;
