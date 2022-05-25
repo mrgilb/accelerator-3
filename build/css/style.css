@@ -4093,6 +4093,7 @@ html {
   .accordion__wrapper {
     width: 79%;
     min-height: 100%;
+    overflow-y: auto;
   }
 
   .accordion__back {
@@ -4109,7 +4110,8 @@ html {
     -ms-flex-align: center;
     align-items: center;
     width: 45%;
-    min-height: 335px;
+    height: 100%;
+    overflow: visible;
     margin-right: 32px;
     -webkit-box-orient: vertical;
     -webkit-box-direction: normal;
@@ -4142,7 +4144,6 @@ html {
 
   .accordion__list p {
     text-align: center;
-    max-height: 178px;
     margin-top: 12px;
   }
 
