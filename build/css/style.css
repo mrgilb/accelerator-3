@@ -4092,7 +4092,7 @@ html {
 
   .accordion__wrapper {
     width: 79%;
-    min-height: 337px;
+    min-height: 100%;
   }
 
   .accordion__back {
