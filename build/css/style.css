@@ -1410,13 +1410,10 @@ html {
 }
 
 .slider__slides--no-js {
-  height: -webkit-min-content;
-  height: -moz-min-content;
-  height: min-content;
-  min-height: -webkit-min-content;
-  min-height: -moz-min-content;
-  min-height: min-content;
+  height: auto;
+  min-height: 100%;
   padding: 0;
+  overflow: visible;
 }
 
 .slider__slides ul {
@@ -1499,14 +1496,20 @@ html {
   -ms-flex-wrap: wrap;
   flex-wrap: wrap;
   position: static;
+  width: auto;
+  margin-left: 0;
+  gap: 20px;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
 }
 
-.slider__list--no-js .slider__item {
-  margin-bottom: 20px;
-  margin-right: 37px;
+.slider__slides .slider__list--no-js .slider__item {
+  margin: 0;
+  width: auto;
 }
 
-.slider__list--no-js .slider__item:nth-child(4n) {
+.slider__slides .slider__list--no-js .slider__item:nth-child(4n) {
   margin-right: 0;
 }
 
@@ -2877,8 +2880,17 @@ html {
     width: 90%;
   }
 
+  .slider--no-js {
+    width: 100%;
+  }
+
   .slider__slides .slider__item {
     max-height: 261px;
+  }
+
+  .slider__slides .slider__list--no-js .slider__item {
+    max-height: 100%;
+    margin: 0;
   }
 
   .discount__text {
@@ -3220,6 +3232,10 @@ html {
   .slider__slides .slider__item {
     min-width: 30.2%;
     margin-right: 3.4%;
+  }
+
+  .slider__slides .slider__list--no-js .slider__item {
+    margin-right: 0;
   }
 
   .slider__image-container {
@@ -4248,6 +4264,12 @@ html {
 @media (max-width: 767px) and (max-width: 767px) {
   .advantages__item--third p {
     margin-top: 10px;
+  }
+}
+
+@media (max-width: 319px) {
+  .slider__slides .slider__list--no-js .slider__item {
+    margin: 0;
   }
 }
 
