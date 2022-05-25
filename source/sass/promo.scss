@@ -73,6 +73,7 @@
   display: grid;
   grid-template-columns: 1fr;
   grid-template-rows: min-content min-content min-content;
+  z-index: 1;
 
   @media (max-width: $vp-1200) {
     margin-top: 30px;

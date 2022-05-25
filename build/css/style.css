@@ -606,6 +606,7 @@ html {
   -ms-grid-rows: min-content min-content min-content;
   grid-template-rows: -webkit-min-content -webkit-min-content -webkit-min-content;
   grid-template-rows: min-content min-content min-content;
+  z-index: 1;
 }
 
 .promo span {
