@@ -8,6 +8,7 @@ if (document.querySelector('.slider__controls') && document.querySelector('.slid
   listSlider.classList.remove('slider__list--no-js');
   sliderContainer.classList.remove('slider__slides--no-js');
   sliderControls.classList.remove('slider__controls--no-js');
+  slider.classList.remove('slider--no-js');
 
 
   let touchPositionStartX = null;

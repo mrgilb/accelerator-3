@@ -28,7 +28,7 @@
   height: min-content;
   display: flex;
   flex-wrap: wrap;
-  align-self: center;
+  align-self: flex-start;
 
   @media (max-width: $vp-1200) {
     align-self: flex-start;
